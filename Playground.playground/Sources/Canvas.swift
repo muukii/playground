@@ -2,9 +2,9 @@ import UIKit
 
 public class Canvas: UIView {
 
-  public let drawFunction: (CGContext) -> Void
+  public let drawFunction: (CGContext, CGSize) -> Void
 
-  public init(size: CGSize, draw: @escaping (CGContext) -> Void) {
+  public init(size: CGSize, draw: @escaping (CGContext, CGSize) -> Void) {
     drawFunction = draw
     super.init(frame: CGRect(origin: .zero, size: size))
   }
@@ -14,6 +14,6 @@ public class Canvas: UIView {
   }
 
   public override func draw(_ rect: CGRect) {
-    drawFunction(UIGraphicsGetCurrentContext()!)
+    drawFunction(UIGraphicsGetCurrentContext()!, bounds.size)
   }
 }
