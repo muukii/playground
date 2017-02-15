@@ -7,5 +7,6 @@
         <page name='JoinInterval'/>
         <page name='Deeplink'/>
         <page name='Message'/>
+        <page name='ObjectIdentifier'/>
     </pages>
 </playground>
