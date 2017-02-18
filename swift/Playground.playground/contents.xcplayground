@@ -9,5 +9,6 @@
         <page name='Message'/>
         <page name='ObjectIdentifier'/>
         <page name='TestableAdapter'/>
+        <page name='Joined'/>
     </pages>
 </playground>
