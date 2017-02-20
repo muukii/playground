@@ -10,6 +10,7 @@
         <page name='ObjectIdentifier'/>
         <page name='TestableAdapter'/>
         <page name='Joined'/>
-        <page name='RootViewController'/>
+        <page name='ChangeRootView'/>
+        <page name='GradientView'/>
     </pages>
 </playground>

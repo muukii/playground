@@ -19,7 +19,6 @@ class ViewController_B: UIViewController {
 
 
 let vc_a = ViewController_A()
-
 let vc_b = ViewController_B()
 
 String(describing: vc_a.view)
