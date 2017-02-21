@@ -12,5 +12,6 @@
         <page name='Joined'/>
         <page name='ChangeRootView'/>
         <page name='GradientView'/>
+        <page name='Format'/>
     </pages>
 </playground>
