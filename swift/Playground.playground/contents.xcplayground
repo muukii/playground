@@ -16,5 +16,6 @@
         <page name='GradientBorder'/>
         <page name='Sort'/>
         <page name='LoopIterator'/>
+        <page name='AlertController'/>
     </pages>
 </playground>
