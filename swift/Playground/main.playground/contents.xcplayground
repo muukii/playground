@@ -17,5 +17,6 @@
         <page name='Sort'/>
         <page name='LoopIterator'/>
         <page name='AlertController'/>
+        <page name='Changes'/>
     </pages>
 </playground>
