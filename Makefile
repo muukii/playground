@@ -1,3 +1,3 @@
 .PHONY: swift
 swift:
-	open ./swift/Playground.playground
+	open ./swift/Playground/main.playground
