@@ -4,7 +4,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-public final class ChangesVariable<Element: Equatable> {
+public final class ChangesVariable<Element> {
 
   public typealias E = Element
 
@@ -20,23 +20,20 @@ public final class ChangesVariable<Element: Equatable> {
     }
     set {
       source.value = newValue
+      hasChanges.value = comparer(originalValue, newValue) == false
     }
   }
 
   public let hasChanges: Variable<Bool>
+  public let comparer: (Element, Element) -> Bool
 
   // MARK: - Initializers
 
-  public init(_ value: Element) {
+  public init(_ value: Element, comparer: @escaping (Element, Element) -> Bool) {
+    self.comparer = comparer
     self.originalValue = value
     self.source = Variable(value)
     self.hasChanges = Variable(false)
-
-    self.source.asObservable()
-      .map { value != $0 }
-      .subscribe(onNext: { [unowned self] in
-        self.hasChanges.value = $0
-      })
   }
 
   // MARK: - Functions
@@ -54,6 +51,15 @@ public final class ChangesVariable<Element: Equatable> {
   }
 }
 
+extension ChangesVariable where Element : Equatable {
+
+  public convenience init(_ value: Element) {
+    self.init(value, comparer: { (original: Element, newValue: Element) -> Bool in
+      original == newValue
+    })
+  }
+}
+
 extension ObservableType where E : Equatable {
 
   public func bindTo(_ variable: ChangesVariable<E>) -> Disposable {
@@ -62,12 +68,7 @@ extension ObservableType where E : Equatable {
       case let .next(element):
         variable.value = element
       case let .error(error):
-        let error = "Binding error to variable: \(error)"
-        #if DEBUG
-          rxFatalError(error)
-        #else
-          print(error)
-        #endif
+        print(error)
       case .completed:
         break
       }
@@ -75,7 +76,9 @@ extension ObservableType where E : Equatable {
   }
 }
 
-let v = ChangesVariable<String>("a")
+let v = ChangesVariable<String>("a") {
+  $0 == $1
+}
 
 v.hasChanges.asObservable().debug("hasChanges : ").subscribe()
 v.asObservable().debug("changes:     ").subscribe()
