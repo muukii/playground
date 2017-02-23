@@ -18,5 +18,6 @@
         <page name='LoopIterator'/>
         <page name='AlertController'/>
         <page name='Array+Equatable'/>
+        <page name='PlaceholderTextView'/>
     </pages>
 </playground>

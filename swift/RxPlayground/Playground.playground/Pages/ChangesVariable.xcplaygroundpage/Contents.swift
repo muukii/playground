@@ -12,7 +12,11 @@ public final class ChangesVariable<Element> {
 
   private let source: Variable<Element>
 
-  public let originalValue: E
+  public var changed: Observable<(Element, Bool)> {
+    return Observable.zip(asObservable(), hasChanges.asObservable()) { $0 }
+  }
+
+  private(set) public var originalValue: E
 
   public var value: E {
     get {
@@ -24,8 +28,15 @@ public final class ChangesVariable<Element> {
     }
   }
 
+  public var changedValue: E? {
+    guard comparer(originalValue, value) == false else {
+      return nil
+    }
+    return value
+  }
+
   public let hasChanges: Variable<Bool>
-  public let comparer: (Element, Element) -> Bool
+  private let comparer: (Element, Element) -> Bool
 
   // MARK: - Initializers
 
@@ -37,6 +48,10 @@ public final class ChangesVariable<Element> {
   }
 
   // MARK: - Functions
+
+  public func commit() {
+    originalValue = value
+  }
 
   public func rollback() {
     value = originalValue
@@ -60,7 +75,7 @@ extension ChangesVariable where Element : Equatable {
   }
 }
 
-extension ObservableType where E : Equatable {
+extension ObservableType {
 
   public func bindTo(_ variable: ChangesVariable<E>) -> Disposable {
     return subscribe { e in
@@ -80,13 +95,13 @@ let v = ChangesVariable<String>("a") {
   $0 == $1
 }
 
-v.hasChanges.asObservable().debug("hasChanges : ").subscribe()
-v.asObservable().debug("changes:     ").subscribe()
+v.changed.debug().subscribe()
 
 v.value = "b"
-print(v.hasChanges.value)
 v.value = "a"
-print(v.hasChanges.value)
+v.value = "b"
+v.value = "a"
+v.value = "a"
 
 
 
