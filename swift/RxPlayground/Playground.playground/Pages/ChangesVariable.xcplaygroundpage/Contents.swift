@@ -4,7 +4,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-public final class ChangesVariable<Element> {
+public final class ChangesVariable<Element>: CustomDebugStringConvertible {
 
   public typealias E = Element
 
@@ -14,6 +14,14 @@ public final class ChangesVariable<Element> {
 
   public var changed: Observable<(Element, Bool)> {
     return Observable.zip(asObservable(), hasChanges.asObservable()) { $0 }
+  }
+
+  public var debugDescription: String {
+    return [
+      "original : \(originalValue)",
+      "changed  : \(changedValue)",
+    ]
+    .joined(separator: "\n")
   }
 
   private(set) public var originalValue: E
@@ -96,6 +104,8 @@ let v = ChangesVariable<String>("a") {
 }
 
 v.changed.debug().subscribe()
+
+debugPrint(v)
 
 v.value = "b"
 v.value = "a"
