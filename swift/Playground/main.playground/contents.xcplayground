@@ -19,5 +19,6 @@
         <page name='AlertController'/>
         <page name='Array+Equatable'/>
         <page name='PlaceholderTextView'/>
+        <page name='CastGenericClass'/>
     </pages>
 </playground>
