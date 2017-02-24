@@ -32,10 +32,12 @@
       let rectanglePath = UIBezierPath(rect: rect)
       context.saveGState()
       rectanglePath.addClip()
-      context.drawLinearGradient(cgGradient,
-                                 start: CGPoint(x: rect.width * startPoint.x, y: rect.maxY * startPoint.y),
-                                 end: CGPoint(x: rect.width * endPoint.x, y: rect.maxY * endPoint.y),
-                                 options: .drawsAfterEndLocation)
+      context.drawLinearGradient(
+        cgGradient,
+        start: CGPoint(x: rect.width * startPoint.x, y: rect.maxY * startPoint.y),
+        end: CGPoint(x: rect.width * endPoint.x, y: rect.maxY * endPoint.y),
+        options: [.drawsAfterEndLocation, .drawsBeforeStartLocation]
+      )
       context.restoreGState()
     }
   }
