@@ -2,6 +2,9 @@
 
 import Foundation
 
-let array = ["a","b","c"]
+var url = URL(string: "https://google.com")!
+let path = "/foo"
+
+url.appendPathComponent(path)
 
 //: [Next](@next)
