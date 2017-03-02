@@ -3,7 +3,8 @@
     <pages>
         <page name='ChangesVariable'/>
         <page name='Distinct'/>
-        <page name='Untitled Page'/>
         <page name='ShareReplay'/>
+        <page name='ToArray'/>
+        <page name='Distict'/>
     </pages>
 </playground>
