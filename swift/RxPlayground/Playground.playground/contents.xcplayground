@@ -6,5 +6,8 @@
         <page name='ShareReplay'/>
         <page name='ToArray'/>
         <page name='Distict'/>
+        <page name='Variable'/>
+        <page name='Untitled Page'/>
+        <page name='merge'/>
     </pages>
 </playground>
