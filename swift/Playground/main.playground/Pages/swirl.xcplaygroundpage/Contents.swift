@@ -21,7 +21,7 @@ func mysteryCircle(sides: [String], center: String) -> String {
     let side = (min..<max).map { $0 }
     array.replaceSubrange(Range<Int>(side.indices), with: side)
     let center = array.removeLast()
-    return array + [center] + array.reversed()
+    return array + [center] + Array(array.reversed())
   }
 
   let chars = sides + [center]
