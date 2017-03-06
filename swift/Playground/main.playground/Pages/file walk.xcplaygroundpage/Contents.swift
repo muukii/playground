@@ -6,7 +6,7 @@
 
   extension FileManager {
 
-    func walk(rootPath: String) -> [String] {
+    public func walk(rootPath: String) -> [String] {
       let fileSystem = self
 
       let standardizedRootPath = NSString(string: rootPath).standardizingPath
@@ -30,7 +30,7 @@
         fileSystem.fileExists(atPath: fullPath, isDirectory: &isDirectory)
 
         if !isDirectory.boolValue {
-          paths[index] = path
+          paths[index] = fullPath 
           index = index.advanced(by: 1)
         }
       }
@@ -40,10 +40,21 @@
 
   }
 
- let paths = FileManager.default.walk(rootPath: "/Users/muukii/Develop/src/github.com/muukii/playground")
+let paths = FileManager.default.walk(rootPath: "~/Develop/src/github.com/muukii/playground/swift/playground")
 
-print(paths.filter { $0.hasSuffix(".swift") })
+let swiftFilePaths = paths.lazy.filter { $0.hasSuffix(".swift") }
 
+for swiftFilePath in swiftFilePaths {
+  do {
+    let file = try String(contentsOfFile: swiftFilePath)
+    file.enumerateLines(invoking: { (line, stop) in
+      print(line)
+    })
+  } catch {
+    print(error)
+  }
+}
+  
 #endif
 
 
