@@ -2,6 +2,8 @@
 
 #if os(macOS)
 
+  // thaks : https://rosettacode.org/wiki/Walk_a_directory/Recursively
+
   import Foundation
 
   extension FileManager {
