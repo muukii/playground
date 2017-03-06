@@ -26,5 +26,8 @@
         <page name='Untitled Page'/>
         <page name='Orange'/>
         <page name='inout'/>
+        <page name='ClassOnStruct'/>
+        <page name='Untitled Page 2'/>
+        <page name='mutliline'/>
     </pages>
 </playground>

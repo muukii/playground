@@ -9,5 +9,6 @@
         <page name='Variable'/>
         <page name='Untitled Page'/>
         <page name='merge'/>
+        <page name='Execute'/>
     </pages>
 </playground>
