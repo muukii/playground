@@ -31,5 +31,6 @@
         <page name='mutliline'/>
         <page name='file walk'/>
         <page name='String'/>
+        <page name='swirl'/>
     </pages>
 </playground>
