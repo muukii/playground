@@ -25,7 +25,7 @@ extension String {
 
 let template = "hello {{ nickname }}, {{ age }}, {{ hight }}🙏"
 
-String(template: template, args: [
+let string = String(template: template, args: [
   "nickname" : "muukii",
   "age" : 1,
   "hight" : 198.4,

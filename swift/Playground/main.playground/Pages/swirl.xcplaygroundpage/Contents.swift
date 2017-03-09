@@ -41,8 +41,8 @@ func mysteryCircle(sides: [String], center: String) -> String {
   return message
 }
 
-print(mysteryCircle(sides: ["🌞","👾","🤡","🤠","🌎","⭐️","🌺"], center: "🤠"))
+//print(mysteryCircle(sides: ["🌞","👾","🤡","🤠","🌎","⭐️","🌺"], center: "🤠"))
 
-print(mysteryCircle(sides: [":muukii:",":vim:",":xcode:",":atom:",":satoshin:",":vim:",":xcode:"], center: ":muukii:"))
+print(mysteryCircle(sides: [":muukii:",":satoshin:"], center: ":muukii:"))
 
 //: [Next](@next)

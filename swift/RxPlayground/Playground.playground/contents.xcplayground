@@ -10,5 +10,6 @@
         <page name='Untitled Page'/>
         <page name='merge'/>
         <page name='Execute'/>
+        <page name='Shared'/>
     </pages>
 </playground>

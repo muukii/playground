@@ -32,5 +32,8 @@
         <page name='file walk'/>
         <page name='String'/>
         <page name='swirl'/>
+        <page name='key'/>
+        <page name='Factory'/>
+        <page name='Transaction'/>
     </pages>
 </playground>
