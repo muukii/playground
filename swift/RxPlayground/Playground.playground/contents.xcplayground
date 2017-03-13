@@ -11,5 +11,6 @@
         <page name='merge'/>
         <page name='Execute'/>
         <page name='Shared'/>
+        <page name='asVariable'/>
     </pages>
 </playground>
