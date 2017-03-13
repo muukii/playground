@@ -12,5 +12,6 @@
         <page name='Execute'/>
         <page name='Shared'/>
         <page name='asVariable'/>
+        <page name='asSingle'/>
     </pages>
 </playground>
