@@ -18,5 +18,6 @@
         <page name='asSingle'/>
         <page name='replay'/>
         <page name='Observable'/>
+        <page name='flatMapIndex'/>
     </pages>
 </playground>
