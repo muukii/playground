@@ -4,7 +4,11 @@ import Foundation
 
 import RxSwift
 
-let o = Observable<Int>.create { o in
+extension String: Error {
+
+}
+
+let next = Observable<Int>.create { o in
 
   o.onNext(2)
   o.onCompleted()
@@ -12,18 +16,32 @@ let o = Observable<Int>.create { o in
   return Disposables.create()
 }
 
-o
-//  .debug()
+let error = Observable<Int>.create { o in
+
+  o.onError("")
+
+  return Disposables.create()
+}
+
+next
   .asSingle()
   .subscribe { e in
     print(e)
 }
 
-o
-//  .debug()
+next
   .asMaybe()
   .subscribe { e in
     print(e)
 }
+
+
+error
+  .asSingle()
+  .subscribe { e in
+    print(e)
+}
+
+
 
 //: [Next](@next)

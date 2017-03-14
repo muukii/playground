@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios'>
     <pages>
+        <page name='Tutorial-3'/>
+        <page name='Tutorial-First'/>
+        <page name='Tutorial-Second'/>
         <page name='ChangesVariable'/>
         <page name='Distinct'/>
         <page name='ShareReplay'/>
@@ -13,5 +16,7 @@
         <page name='Shared'/>
         <page name='asVariable'/>
         <page name='asSingle'/>
+        <page name='replay'/>
+        <page name='Observable'/>
     </pages>
 </playground>
