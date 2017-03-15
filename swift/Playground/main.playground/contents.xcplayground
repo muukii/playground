@@ -39,5 +39,6 @@
         <page name='expand collectionview'/>
         <page name='FormatSeconds'/>
         <page name='Constraints'/>
+        <page name='description'/>
     </pages>
 </playground>
