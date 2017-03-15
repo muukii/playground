@@ -25,13 +25,19 @@ class ViewController: UIViewController {
   }
 }
 
-let vc = ViewController()
+let vc1 = ViewController()
+let vc2 = ViewController()
+vc1.view
+vc2.view
 
-vc.view
+vc1.beginAppearanceTransition(true, animated: true)
+//vc1.endAppearanceTransition()
+vc1.beginAppearanceTransition(true, animated: true)
+vc1.endAppearanceTransition()
+vc1.endAppearanceTransition()
 
-vc.beginAppearanceTransition(true, animated: true)
-vc.endAppearanceTransition()
 
-vc.beginAppearanceTransition(false, animated: true)
+//
+//vc1.beginAppearanceTransition(false, animated: true)
 
 //: [Next](@next)
