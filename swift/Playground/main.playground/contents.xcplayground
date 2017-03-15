@@ -39,6 +39,7 @@
         <page name='expand collectionview'/>
         <page name='FormatSeconds'/>
         <page name='Constraints'/>
-        <page name='description'/>
+        <page name='UIViewController.objectID'/>
+        <page name='UIViewController.lifeCycle'/>
     </pages>
 </playground>
