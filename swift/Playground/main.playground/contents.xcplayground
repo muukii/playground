@@ -42,5 +42,6 @@
         <page name='UIViewController.objectID'/>
         <page name='UIViewController.lifeCycle'/>
         <page name='iOS-Directories'/>
+        <page name='Variable'/>
     </pages>
 </playground>
