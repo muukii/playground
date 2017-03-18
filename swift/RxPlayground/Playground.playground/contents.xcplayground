@@ -19,5 +19,7 @@
         <page name='replay'/>
         <page name='Observable'/>
         <page name='flatMapIndex'/>
+        <page name='zip'/>
+        <page name='withLatestFrom'/>
     </pages>
 </playground>
