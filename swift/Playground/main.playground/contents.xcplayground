@@ -41,5 +41,6 @@
         <page name='Constraints'/>
         <page name='UIViewController.objectID'/>
         <page name='UIViewController.lifeCycle'/>
+        <page name='iOS-Directories'/>
     </pages>
 </playground>
