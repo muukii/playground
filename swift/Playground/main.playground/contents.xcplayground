@@ -44,5 +44,6 @@
         <page name='iOS-Directories'/>
         <page name='Variable'/>
         <page name='Collection'/>
+        <page name='Error'/>
     </pages>
 </playground>
