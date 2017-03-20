@@ -45,5 +45,7 @@
         <page name='Variable'/>
         <page name='Collection'/>
         <page name='Error'/>
+        <page name='L10n'/>
+        <page name='Stream'/>
     </pages>
 </playground>
