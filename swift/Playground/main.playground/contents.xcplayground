@@ -47,5 +47,6 @@
         <page name='Error'/>
         <page name='L10n'/>
         <page name='Stream'/>
+        <page name='deadlock'/>
     </pages>
 </playground>
