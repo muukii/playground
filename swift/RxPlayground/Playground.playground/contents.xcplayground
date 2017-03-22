@@ -22,5 +22,6 @@
         <page name='zip'/>
         <page name='withLatestFrom'/>
         <page name='flatMapFirst'/>
+        <page name='Concurrent'/>
     </pages>
 </playground>
