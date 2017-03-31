@@ -4,6 +4,6 @@ import UIKit
 
 print(NSHomeDirectory())
 
-NSSearchPathForDirectoriesInDomains(.adminApplicationDirectory, .allDomainsMask, true)
+NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .allDomainsMask, true)
 
 //: [Next](@next)

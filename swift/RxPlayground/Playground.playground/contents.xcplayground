@@ -23,5 +23,6 @@
         <page name='withLatestFrom'/>
         <page name='flatMapFirst'/>
         <page name='Array'/>
+        <page name='SubjectToSingle'/>
     </pages>
 </playground>
