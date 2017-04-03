@@ -49,5 +49,6 @@
         <page name='Stream'/>
         <page name='deadlock'/>
         <page name='regex'/>
+        <page name='blankURL'/>
     </pages>
 </playground>
