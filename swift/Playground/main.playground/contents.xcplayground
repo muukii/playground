@@ -50,5 +50,6 @@
         <page name='deadlock'/>
         <page name='regex'/>
         <page name='blankURL'/>
+        <page name='StaticString'/>
     </pages>
 </playground>
