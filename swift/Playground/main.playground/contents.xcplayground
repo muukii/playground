@@ -51,5 +51,7 @@
         <page name='regex'/>
         <page name='blankURL'/>
         <page name='StaticString'/>
+        <page name='Build NestedJSON with NSDictionary'/>
+        <page name='Build NestedJSON with SwiftDictionary'/>
     </pages>
 </playground>
