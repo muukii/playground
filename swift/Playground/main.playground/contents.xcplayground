@@ -53,5 +53,6 @@
         <page name='StaticString'/>
         <page name='Build NestedJSON with NSDictionary'/>
         <page name='Build NestedJSON with SwiftDictionary'/>
+        <page name='uppercaseFirst'/>
     </pages>
 </playground>
