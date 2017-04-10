@@ -24,5 +24,6 @@
         <page name='flatMapFirst'/>
         <page name='Array'/>
         <page name='SubjectToSingle'/>
+        <page name='Materiallize'/>
     </pages>
 </playground>

@@ -54,5 +54,7 @@
         <page name='Build NestedJSON with NSDictionary'/>
         <page name='Build NestedJSON with SwiftDictionary'/>
         <page name='uppercaseFirst'/>
+        <page name='Int-switch-case'/>
+        <page name='trailing closure'/>
     </pages>
 </playground>

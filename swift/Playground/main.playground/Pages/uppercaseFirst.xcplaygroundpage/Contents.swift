@@ -20,6 +20,6 @@ var muukii2 = muukii
 muukii.popFirst()
 muukii.popFirst()
 
-String(muukii)
-String(muukii2)
+print(String(muukii))
+print(String(muukii2))
 //: [Next](@next)

@@ -8,14 +8,13 @@ extension String: Error {
 
 }
 
-let next = Observable<Int>.create { o in
+let single = Observable<Int>.create { o in
   print("run")
   o.onNext(2)
   o.onCompleted()
 
   return Disposables.create()
 }
-.shareReplay(1)
 
 let error = Observable<Int>.create { o in
 
@@ -24,18 +23,16 @@ let error = Observable<Int>.create { o in
   return Disposables.create()
 }
 
-next
-  .asSingle()
+single
   .subscribe { e in
     print(e)
 }
 
-next
+single
   .asMaybe()
   .subscribe { e in
     print(e)
 }
-
 
 error
   .asSingle()
@@ -43,6 +40,17 @@ error
     print(e)
 }
 
+
+/*:
+
+ */
+
+let s = PublishSubject<Int>()
+
+s.asSingle().debug().subscribe()
+
+s.onNext(3)
+s.onCompleted()
 
 
 //: [Next](@next)

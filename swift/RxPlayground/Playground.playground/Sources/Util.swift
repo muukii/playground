@@ -5,3 +5,7 @@ public func after(_ seconds: Int, _ closure: @escaping () -> Void) {
     closure()
   })
 }
+
+extension String: Error {
+  
+}
