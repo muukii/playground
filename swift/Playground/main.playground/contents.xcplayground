@@ -56,5 +56,6 @@
         <page name='uppercaseFirst'/>
         <page name='Int-switch-case'/>
         <page name='trailing closure'/>
+        <page name='ClassName'/>
     </pages>
 </playground>

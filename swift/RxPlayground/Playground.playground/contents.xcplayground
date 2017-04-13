@@ -25,5 +25,6 @@
         <page name='Array'/>
         <page name='SubjectToSingle'/>
         <page name='Materiallize'/>
+        <page name='Single+flatMap'/>
     </pages>
 </playground>
