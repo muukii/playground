@@ -60,5 +60,6 @@
         <page name='Range'/>
         <page name='NestedGenerics'/>
         <page name='CornerRoundingImage'/>
+        <page name='lazyCollection'/>
     </pages>
 </playground>
