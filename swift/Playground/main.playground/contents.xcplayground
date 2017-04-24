@@ -65,5 +65,7 @@
         <page name='UserDefaults'/>
         <page name='localhost'/>
         <page name='autoclosure'/>
+        <page name='Locale'/>
+        <page name='Relative'/>
     </pages>
 </playground>
