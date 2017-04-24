@@ -61,5 +61,9 @@
         <page name='NestedGenerics'/>
         <page name='CornerRoundingImage'/>
         <page name='lazyCollection'/>
+        <page name='Trim whitespace'/>
+        <page name='UserDefaults'/>
+        <page name='localhost'/>
+        <page name='autoclosure'/>
     </pages>
 </playground>
