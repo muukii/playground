@@ -27,5 +27,6 @@
         <page name='Materiallize'/>
         <page name='Single+flatMap'/>
         <page name='Subject-dispose'/>
+        <page name='chain'/>
     </pages>
 </playground>
