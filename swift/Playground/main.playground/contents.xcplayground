@@ -67,5 +67,7 @@
         <page name='autoclosure'/>
         <page name='Locale'/>
         <page name='Relative'/>
+        <page name='Join'/>
+        <page name='Nil'/>
     </pages>
 </playground>
