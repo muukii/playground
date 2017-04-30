@@ -1,7 +1,7 @@
-#!bin/bash
+#! /bin/bash
 
-set -e 
-jobs_await() {    
+set -e
+jobs_await() {
   local spinners=('🌕' '🌖' '🌗' '🌘' '🌑' '🌒' '🌓' '🌔')
   while true; do
     for spinner in ${spinners[@]}; do
@@ -12,4 +12,3 @@ jobs_await() {
 }
 
 jobs_await
-
