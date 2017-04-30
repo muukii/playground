@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw'>
+<playground version='6.0' target-platform='macos' display-mode='raw'>
     <pages>
         <page name='Online'/>
         <page name='Presenter'/>
@@ -69,5 +69,6 @@
         <page name='Relative'/>
         <page name='Join'/>
         <page name='Nil'/>
+        <page name='dot'/>
     </pages>
 </playground>
