@@ -1,4 +1,8 @@
-#! /bin/sh
-
 echo $PATH
-which runhaskell
+if ! which runhaskell &> /dev/null ; then
+  echo "runhaskell not found"
+fi
+
+which fzf
+which nvm
+which stack
