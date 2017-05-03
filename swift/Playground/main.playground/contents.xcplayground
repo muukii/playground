@@ -70,6 +70,7 @@
         <page name='Join'/>
         <page name='Nil'/>
         <page name='dot'/>
-        <page name='associated'/>
+        <page name='objc_getAssociatedObject'/>
+        <page name='sleep'/>
     </pages>
 </playground>
