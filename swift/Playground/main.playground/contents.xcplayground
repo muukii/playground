@@ -73,5 +73,6 @@
         <page name='objc_getAssociatedObject'/>
         <page name='sleep'/>
         <page name='standarized'/>
+        <page name='string.split'/>
     </pages>
 </playground>

@@ -22,23 +22,30 @@ struct Box: CustomDebugStringConvertible {
 let source: [Box] = [.init(0), .init(1), .init(2), .init(3), .init(4)]
 
 print("non-lazy")
-source.map { $0.run() }
+//let _a = source.map { $0.run() }
 
-print("lazy")
-source
-  .lazy
-  .map { $0.run() }
-  .index { (b) -> Bool in
-    b.index == 1
-}
+let _b = source.lazy.map { $0.run() }.prefix(3)
 
-print("lazy2")
-source
-  .map { $0.run() }
-  .lazy
-  .index { (b) -> Bool in
-    b.index == 1
-  }
+_b[0]
+
+
+//print("lazy")
+//source
+//  .lazy
+//  .map { $0.run() }
+//  .index { (b) -> Bool in
+//    b.index == 1
+//}
+//
+//print("lazy2")
+//source
+//  .lazy
+//  .map { $0.run() }
+//  .index { (b) -> Bool in
+//    b.index == 1
+//  }
+//
+//source.prefix(3)
 
 
 //: [Next](@next)
