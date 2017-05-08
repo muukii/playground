@@ -9,6 +9,7 @@ struct Box: CustomDebugStringConvertible {
   init(_ i: Int) {
     self.index = i
   }
+  
   func run() -> Box {
     print("run : \(debugDescription)")
     return self
@@ -23,10 +24,13 @@ let source: [Box] = [.init(0), .init(1), .init(2), .init(3), .init(4)]
 
 print("non-lazy")
 //let _a = source.map { $0.run() }
+//print("end")
 
-let _b = source.lazy.map { $0.run() }.prefix(3)
+let _a = source.lazy.map { $0.run() }
+let _b = _ajprefix(3)
+let a = _b.map { $0.run() }
 
-_b[0]
+//_b[0]
 
 
 //print("lazy")
