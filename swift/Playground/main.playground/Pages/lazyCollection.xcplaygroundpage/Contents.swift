@@ -20,6 +20,7 @@ struct Box: CustomDebugStringConvertible {
   }
 }
 
+
 let source: [Box] = [.init(0), .init(1), .init(2), .init(3), .init(4)]
 
 print("non-lazy")
