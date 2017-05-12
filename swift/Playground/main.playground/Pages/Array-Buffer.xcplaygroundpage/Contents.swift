@@ -2,16 +2,15 @@
 
 import Foundation
 
-let count = 2000
+let count = 1000
 
 /*
- []
- [][]
- [][][]
- [][][][]
- [][][][][]
- 
- [, , , , ,  , , , , , , ,,]
+ > []
+ > [][]
+ > [][][]
+ > [][][][]
+ > [][][][][]
+
  */
 
 do {
@@ -21,13 +20,9 @@ do {
   }
 }
 
-do {
-  var a = [Int]()
-  a.reserveCapacity(10000)
-  for i in 0..<count {
-    a.append(i)
-  }
-}
+/*
+  [ , , , , , , , , , , , , , ]
+ */
 
 do {
   var a = [Int].init(repeating: 0, count: count)

@@ -74,5 +74,7 @@
         <page name='sleep'/>
         <page name='standarized'/>
         <page name='string.split'/>
+        <page name='Untitled Page 3'/>
+        <page name='Array-Buffer'/>
     </pages>
 </playground>
