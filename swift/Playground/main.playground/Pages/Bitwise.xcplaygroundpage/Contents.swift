@@ -25,4 +25,10 @@ do {
 let p = 0.1.bitPattern
 String(p, radix: 2)
 
+let line = 1234
+let a = "fff"
+let b = "aaa"
+
+line ^ a.hash ^ b.hash
+
 //: [Next](@next)
