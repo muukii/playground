@@ -28,5 +28,8 @@
         <page name='Single+flatMap'/>
         <page name='Subject-dispose'/>
         <page name='chain'/>
+        <page name='ObserveMain'/>
+        <page name='Untitled Page 2'/>
+        <page name='concat'/>
     </pages>
 </playground>

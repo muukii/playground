@@ -78,5 +78,6 @@
         <page name='Array-Buffer'/>
         <page name='OptionalSet'/>
         <page name='Bitwise'/>
+        <page name='DataStore'/>
     </pages>
 </playground>
