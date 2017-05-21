@@ -5,24 +5,27 @@ import Foundation
 public struct Options: OptionSet {
   public let rawValue: UInt64
   
-  static let initial: Options = .init(rawValue: 1 << 0)
-  static let update: Options = .init(rawValue: 1 << 1)
-  static let remove: Options = .init(rawValue: 1 << 61)
+  static let a: Options = .init(rawValue: 1 << 0)
+  static let b: Options = .init(rawValue: 1 << 1)
+  static let c: Options = .init(rawValue: 1 << 2)
+  static let d: Options = .init(rawValue: 1 << 3)
+  static let e: Options = .init(rawValue: 1 << 4)
   
   public init(rawValue: UInt64) {
     self.rawValue = rawValue
   }
 }
 
-var option: Options = .remove
+let source: Options = [.a, .b, .c, .d]
 
-String(option.rawValue, radix: 2)
+source.isStrictSubset(of: [])
+source.isSuperset(of: [])
+source.isSubset(of: [])
 
-option.insert(.initial)
-option.insert(.initial)
+source.isSubset(of: [.a])
+source.isSubset(of: [.a, .b, .c])
 
-option.contains(.remove)
-
-option.rawValue
+source.isDisjoint(with: [.a, .b])
+source.isSuperset(of: [.a, .e])
 
 //: [Next](@next)

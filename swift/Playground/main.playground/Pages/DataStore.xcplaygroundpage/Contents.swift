@@ -2,16 +2,10 @@
 
 import Foundation
 
-protocol ModelType {
-  
-  associatedtype IdentityType
-  var identity: IdentityType
-}
 
-class ModelStore {
-  
-  var dictionary: [String : Any] = [String : Any].init(minimumCapacity: 1000)
-  
-}
+let old = [1,2,3]
+let new = [1,2,3,4,5,6]
+
+new.suffix(old.count)
 
 //: [Next](@next)

@@ -2,6 +2,14 @@
 
 import Foundation
 
+//infix operator |> : AssignmentPrecedence
+//
+//func |> (lhs: Group, rhs: String) {
+//  lhs.context(rhs) { (<#Group.Context#>) in
+//    <#code#>
+//  }
+//}
+
 class Group {
   
   struct Case {
