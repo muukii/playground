@@ -7,11 +7,33 @@ import RxCocoa
 
 PlaygroundPage.current.needsIndefiniteExecution = true
 
-let o = Single<Void>.create { o in
+let o1 = Single<Void>.create { o in
   
-  print("-")
+  print("-1")
   DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-    print("+")
+    print("+1")
+    o(.success())
+  })
+  
+  return Disposables.create()
+}
+
+let o2 = Single<Void>.create { o in
+  
+  print("-2")
+  DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+    print("+2")
+    o(.success())
+  })
+  
+  return Disposables.create()
+}
+
+let o3 = Single<Void>.create { o in
+  
+  print("-3")
+  DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+    print("+3")
     o(.success())
   })
   
@@ -19,9 +41,9 @@ let o = Single<Void>.create { o in
 }
 
 Observable.from([
-  o,
-  o,
-  o,
+  o1,
+  o2,
+  o3,
   ])
   .concat()
   .reduce((), accumulator: { _ in () })

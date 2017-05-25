@@ -31,5 +31,6 @@
         <page name='ObserveMain'/>
         <page name='Untitled Page 2'/>
         <page name='concat'/>
+        <page name='Take1'/>
     </pages>
 </playground>
