@@ -23,13 +23,17 @@ struct Box: CustomDebugStringConvertible {
 
 let source: [Box] = [.init(0), .init(1), .init(2), .init(3), .init(4)]
 
-print("non-lazy")
+
 //let _a = source.map { $0.run() }
 //print("end")
 
-let _a = source.lazy.map { $0.run() }
-let _b = _ajprefix(3)
-let a = _b.map { $0.run() }
+let _a = source.lazy
+  .filter { $0.index > 0 }
+  .map { $0.run() }
+
+_a.isEmpty
+
+
 
 //_b[0]
 
