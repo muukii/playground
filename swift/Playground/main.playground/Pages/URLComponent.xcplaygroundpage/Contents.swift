@@ -42,4 +42,11 @@ public struct WebRequest {
   }
 }
 
+
+let url = "https://muukii.me?oooo="
+
+URLComponents(string: url)?.queryItems
+
+
+
 //: [Next](@next)
