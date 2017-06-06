@@ -81,5 +81,7 @@
         <page name='DataStore'/>
         <page name='Untitled Page 4'/>
         <page name='URLComponent'/>
+        <page name='CalculateSize'/>
+        <page name='Untitled Page 6'/>
     </pages>
 </playground>
