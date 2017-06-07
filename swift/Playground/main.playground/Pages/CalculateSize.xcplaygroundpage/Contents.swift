@@ -12,8 +12,8 @@ extension UIView {
       height: maxHeight ?? UILayoutFittingCompressedSize.height
     )
     
-    let horizontalPriority = withMaxWidth == nil ? UILayoutPriorityFittingSizeLevel : UILayoutPriorityRequired
-    let verticalPriority = maxHeight == nil ? UILayoutPriorityFittingSizeLevel : UILayoutPriorityRequired
+    let horizontalPriority = withMaxWidth == nil ? UILayoutPriority.fittingSizeLevel : UILayoutPriority.required
+    let verticalPriority = maxHeight == nil ? UILayoutPriority.fittingSizeLevel : UILayoutPriority.required
     
     let size = systemLayoutSizeFitting(
       targetSize,
@@ -74,8 +74,8 @@ label.systemLayoutSizeFitting(UILayoutFittingExpandedSize)
 
 label.systemLayoutSizeFitting(
   CGSize(width: 1, height: UILayoutFittingCompressedSize.height),
-  withHorizontalFittingPriority: UILayoutPriorityFittingSizeLevel,
-  verticalFittingPriority: UILayoutPriorityFittingSizeLevel
+  withHorizontalFittingPriority: UILayoutPriority.fittingSizeLevel,
+  verticalFittingPriority: UILayoutPriority.fittingSizeLevel
 )
 
 
@@ -130,8 +130,8 @@ view.systemLayoutSizeFitting(UILayoutFittingExpandedSize)
 
 view.systemLayoutSizeFitting(
   CGSize(width: 50.0, height: UILayoutFittingCompressedSize.height),
-  withHorizontalFittingPriority: UILayoutPriorityRequired,
-  verticalFittingPriority: UILayoutPriorityFittingSizeLevel
+  withHorizontalFittingPriority: UILayoutPriority.required,
+  verticalFittingPriority: UILayoutPriority.fittingSizeLevel
 )
 
 //print(UILayoutFittingCompressedSize) // (0.0, 0.0)

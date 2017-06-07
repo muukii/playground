@@ -82,6 +82,6 @@
         <page name='Untitled Page 4'/>
         <page name='URLComponent'/>
         <page name='CalculateSize'/>
-        <page name='Untitled Page 6'/>
+        <page name='Codable Decodable'/>
     </pages>
 </playground>
