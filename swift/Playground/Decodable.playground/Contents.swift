@@ -7,6 +7,30 @@ let jsonData = try Data(contentsOf: URL(fileURLWithPath: jsonPath))
 
 /*:
  
+ Has optional variable
+ 
+ */
+
+do {
+  
+  struct Shot: Decodable {
+    
+    let id: String
+    let name: String?
+  }
+  
+  let decoder = JSONDecoder()
+  
+  do {
+    let shots = try decoder.decode([Shot].self, from: jsonData)
+  } catch {
+    print(error.localizedDescription)
+  }
+  
+}
+
+/*:
+ 
  Most simply usage
  
  */
@@ -29,7 +53,6 @@ do {
   }
   
 }
-
 
 /*:
  
