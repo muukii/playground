@@ -107,4 +107,69 @@ do {
   
 }
 
+/*:
+ 
+ Real world
+ 
+ */
 
+do {
+  
+  struct User: Decodable {
+    let id: String
+    let bio: String
+    let username: String
+    let name: String
+    let updatedAt: Date
+    
+    private enum CodingKeys: String, CodingKey {
+      case id
+      case bio
+      case username
+      case name
+      case updatedAt = "updated_at"
+    }
+  }
+  
+  struct Shot: Decodable {
+    
+    struct URLs: Decodable {
+      
+      let raw: URL
+      let full: URL
+      let thumb: URL
+      let regular: URL
+      let small: URL
+      
+    }
+    
+    let id: String
+    let width: Int
+    let height: Int
+    let createdAt: Date
+    let updatedAt: Date
+    let urls: URLs
+    let user: User
+    
+    private enum CodingKeys: String, CodingKey {
+      case id
+      case width
+      case height
+      case createdAt = "created_at"
+      case updatedAt = "updated_at"
+      case urls
+      case user
+    }
+  }
+  
+  let decoder = JSONDecoder()
+  decoder.dateDecodingStrategy = .iso8601
+  
+  do {
+    let shots = try decoder.decode([Shot].self, from: jsonData)
+    print(shots)
+  } catch {
+    print(error.localizedDescription)
+  }
+  
+}
