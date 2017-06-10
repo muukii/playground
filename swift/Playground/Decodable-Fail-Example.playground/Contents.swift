@@ -232,3 +232,37 @@ do {
     dump(error)
   }
 }
+
+do {
+  
+  let string = """
+[
+  {
+    "name" : "Hiroshi Kimura",
+    "age" : 18,
+    "state" : {
+      "isFavorite" : false
+    },
+    "flags" : ["a", "b", "c"]
+  }
+]
+"""
+  
+  let data = string.data(using: .utf8)!
+  
+  struct User: Decodable {
+    
+    struct State: Decodable {
+      let isFavorite: Bool
+    }
+    
+    let name: String
+    let age: Int
+    let state: State
+    let flags: [String]
+  }
+  
+  let decoder = JSONDecoder()
+  try decoder.decode([User].self, from: data)
+  
+}
