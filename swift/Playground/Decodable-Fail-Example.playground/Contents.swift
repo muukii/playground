@@ -22,6 +22,7 @@ extension Array where Element == CodingKey? {
 func dumpDecodingError(_ error: DecodingError) {
   
   func dumpContext(_ context: DecodingError.Context) {
+    print(context.codingPath.map { $0?.stringValue })
     print("codingPath:", context.codingPath.prettyPrint())
     print("debugDescription: ", context.debugDescription)
   }
@@ -31,7 +32,7 @@ func dumpDecodingError(_ error: DecodingError) {
     print("Error:", "dataCorrupted")
     dumpContext(context)
   case .keyNotFound(let key, let context):
-    print("Error:", "keyNotFound")
+    print("Error:", "keyNotFound", key)
     print(key.stringValue)
     dumpContext(context)
   case .typeMismatch(let type, let context):
@@ -43,6 +44,38 @@ func dumpDecodingError(_ error: DecodingError) {
     print("targetType:", type)
     dumpContext(context)
   }
+}
+
+URL(string: "")
+
+do {
+  
+  let json = """
+{
+  "url": ""
+}
+""".data(using: .utf8)!
+  
+  struct User: Decodable {
+    
+    let url: URL?
+  }
+  
+  let decoder = JSONDecoder()
+  
+  do {
+    let users = try decoder.decode(User.self, from: json)
+    print(users.url)
+  } catch let error as DecodingError {
+    error.errorCode
+    error.errorUserInfo
+    print(error)
+    
+    if case .dataCorrupted(let context) = error {
+      context.debugDescription
+    }
+  }
+  
 }
 
 let string = """
@@ -252,17 +285,36 @@ do {
   
   struct User: Decodable {
     
-    struct State: Decodable {
-      let isFavorite: Bool
+    private enum CodingKeys: String, CodingKey {
+      case name = "username"
+      case age
+      case flags
     }
     
     let name: String
     let age: Int
-    let state: State
     let flags: [String]
+    
+    init(from decoder: Decoder) throws {
+      
+      let c = try decoder.container(keyedBy: CodingKeys.self)
+      
+      name = try c.decode(String.self, forKey: .name)
+      age = try c.decode(Int.self, forKey: .age)
+      flags = try c.decode([String].self, forKey: .flags)
+    }
+    
   }
   
   let decoder = JSONDecoder()
   try decoder.decode([User].self, from: data)
+  
+  do {
+    let users = try decoder.decode([User].self, from: data)
+  } catch let error as DecodingError {
+    
+  } catch {
+    
+  }
   
 }
