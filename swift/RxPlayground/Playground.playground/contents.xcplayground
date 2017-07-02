@@ -34,5 +34,6 @@
         <page name='Take1'/>
         <page name='concatMap'/>
         <page name='flatMap'/>
+        <page name='dispose'/>
     </pages>
 </playground>
