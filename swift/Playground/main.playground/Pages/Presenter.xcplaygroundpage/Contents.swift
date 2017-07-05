@@ -32,21 +32,29 @@ public struct ModalContext {
    opportunity of embed to containerViewController (e.g UINavigationController)
    */
   public var embedContainer: () -> UIViewController
+  private var tweak: (UIViewController) -> Void = { _ in }
 
   public init<T: UIViewController>(viewController: T, embedContainer: @escaping (T) -> UIViewController = { $0 }) {
     self.viewController = viewController
     self.embedContainer = { embedContainer(viewController) }
   }
+  
+  public func tweak(_ c: @escaping (UIViewController) -> Void) -> ModalContext {
+    
+    var s = self
+    s.tweak = c
+    return s
+  }
 
-  @discardableResult
   public func present(on presentingViewController: UIViewController, animated: Bool, completion: @escaping () -> Void = {}) {
 
     let controller = embedContainer()
+    
+    tweak(controller)
 
     presentingViewController.present(controller, animated: animated, completion: completion)
   }
 }
-
 
 extension PushPresentable where Self : UIViewController {
 
@@ -71,6 +79,8 @@ class ViewController: UIViewController, PushPresentable, ModalPresentable {
     })
   }
 }
+
+
 
 let b = UIViewController()
 let n = UINavigationController()

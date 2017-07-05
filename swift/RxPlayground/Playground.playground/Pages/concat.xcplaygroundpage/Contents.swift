@@ -40,14 +40,23 @@ let o3 = Single<Void>.create { o in
   return Disposables.create()
 }
 
-Observable.from([
-  o1,
-  o2,
-  o3,
+//Observable.from([
+//  o1,
+//  o2,
+//  o3,
+//  ])
+//  .concat()
+//  .reduce((), accumulator: { _ in () })
+//  .asSingle()
+//  .debug()
+//  .subscribe()
+
+Observable.concat([
+  o1.asObservable(),
+  o2.asObservable(),
+  o3.asObservable()
   ])
-  .concat()
-  .reduce((), accumulator: { _ in () })
-  .asSingle()
+  .ignoreElements()
   .debug()
   .subscribe()
 
