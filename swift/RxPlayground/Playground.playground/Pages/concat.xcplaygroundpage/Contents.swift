@@ -56,7 +56,8 @@ Observable.concat([
   o2.asObservable(),
   o3.asObservable()
   ])
-  .ignoreElements()
+  .materialize()
+  .toArray()
   .debug()
   .subscribe()
 

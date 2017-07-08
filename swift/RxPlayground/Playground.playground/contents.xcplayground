@@ -35,5 +35,6 @@
         <page name='concatMap'/>
         <page name='flatMap'/>
         <page name='dispose'/>
+        <page name='CancelToken'/>
     </pages>
 </playground>

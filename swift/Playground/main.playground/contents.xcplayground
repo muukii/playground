@@ -83,5 +83,6 @@
         <page name='URLComponent'/>
         <page name='CalculateSize'/>
         <page name='Codable Decodable'/>
+        <page name='Float'/>
     </pages>
 </playground>
