@@ -47,6 +47,6 @@ let url = "https://muukii.me?oooo="
 
 URLComponents(string: url)?.queryItems
 
-
+URLComponents(url: URL(string: "/foo")!, resolvingAgainstBaseURL: false)
 
 //: [Next](@next)

@@ -49,6 +49,14 @@ public func == <T: Equatable>(lhs: LazyValue<T>, rhs: LazyValue<T>) -> Bool {
   return lhs.value == rhs.value
 }
 
+let a = ["a"]
+let b = a
+  .lazy
+  .map { $0.count }
+
+b.first
+b.first
+
 do {
   let value = LazyValue(3)
   
