@@ -36,5 +36,8 @@
         <page name='flatMap'/>
         <page name='dispose'/>
         <page name='CancelToken'/>
+        <page name='Untitled Page 3'/>
+        <page name='andThen'/>
+        <page name='timer'/>
     </pages>
 </playground>

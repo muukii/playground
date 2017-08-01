@@ -2,7 +2,7 @@
 
 import Foundation
 
-let count = 1000
+let count = 500
 
 /*
  > []
@@ -14,7 +14,15 @@ let count = 1000
  */
 
 do {
-  var a = [Int]()
+  var a = [Int?]()
+  for i in 0..<count {
+    a.append(i)
+  }
+}
+
+do {
+  var a = [Int?]()
+  a.reserveCapacity(count)
   for i in 0..<count {
     a.append(i)
   }
@@ -25,10 +33,11 @@ do {
  */
 
 do {
-  var a = [Int].init(repeating: 0, count: count)
+  var a = [Int?].init(repeating: nil, count: count)
   for i in 0..<count {
     a[i] = i
   }
+  a.flatMap { $0 }
 }
 
 //: [Next](@next)

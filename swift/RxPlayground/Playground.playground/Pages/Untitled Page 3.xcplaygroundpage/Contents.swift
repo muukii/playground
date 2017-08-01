@@ -2,32 +2,75 @@
 
 import RxSwift
 
-let c = Completable.create { (o) -> Disposable in
+import PlaygroundSupport
+
+PlaygroundPage.current.needsIndefiniteExecution = true
+
+extension Observable {
   
-  print("o")
-  o(.completed)
-  
-  return Disposables.create()
+  func subscribeUntilComplete(on disposeBag: DisposeBag) -> Observable<Element> {
+    
+    let s = self.asObservable().replay(1)
+    s.subscribe().disposed(by: disposeBag)
+    
+    return s
+      .do(
+        onSubscribe: {
+          s.connect().disposed(by: disposeBag)
+      },
+        onDispose: {
+      })
+  }
 }
 
-let s = PublishSubject<Void>()
-
-s
-  .debug()
-  .flatMap {
-    c
+extension PrimitiveSequence where Trait == SingleTrait {
+  
+  func subscribeUntilComplete(on disposeBag: DisposeBag) -> Single<Element> {
+    
+    return asObservable().subscribeUntilComplete(on: disposeBag).asSingle()
   }
-  .do(onNext: { o in
-    print("n", o)
-  })
-  .debug()
-  .subscribe()
+}
 
-s.onNext()
-s.onNext()
+let d = DisposeBag()
 
-c
-  .debug()
-  .subscribe()
+func operation() -> Single<Void> {
+  
+  let task = Single.just(1)
+    .flatMap { _ in
+      Single<Void>.create { o in
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+          print("task1 end")
+          o(.success())
+        })
+        
+        return Disposables.create()
+      }
+    }
+    .flatMap { _ in
+      Single<Void>.create { o in
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+          print("task2 end")
+          o(.success())
+        })
+        
+        return Disposables.create()
+      }
+    }
+    .debug()
+    .asObservable()
+    .take(0.8, scheduler: MainScheduler.instance)
+    .asSingle()
+    .subscribeUntilComplete(on: d)
+    .debug()
+  
+  return task
+}
+
+
+let t = operation()
+
+t.debug().subscribe().dispose()
 
 //: [Next](@next)
