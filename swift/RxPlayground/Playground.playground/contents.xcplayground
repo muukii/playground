@@ -39,5 +39,8 @@
         <page name='Untitled Page 3'/>
         <page name='andThen'/>
         <page name='timer'/>
+        <page name='Untitled Page 4'/>
+        <page name='filterLatestFrom'/>
+        <page name='Signal'/>
     </pages>
 </playground>

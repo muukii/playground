@@ -42,24 +42,27 @@ public final class MutableStateVariable<T> {
   }
 }
 
-//struct State {
-//  var value1: Int = 0
-//  var value2: Int = 0
-//}
-
-class State : CustomStringConvertible {
+struct State {
   var value1: Int = 0
   var value2: Int = 0
-
-  var description: String {
-    return "\(value1), \(value2)"
-  }
 }
+
+//class State : CustomStringConvertible {
+//  var value1: Int = 0
+//  var value2: Int = 0
+//
+//  var description: String {
+//    return "\(value1), \(value2)"
+//  }
+//}
 
 let s = PublishSubject<Int>()
 let v = MutableStateVariable(State())
 
 v.asObservable().debug().subscribe()
+
+//v.value.value1 = 10
+//v.value.value1 = 30
 
 s
   .map { $0 * 2 }
