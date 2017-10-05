@@ -42,5 +42,6 @@
         <page name='Untitled Page 4'/>
         <page name='filterLatestFrom'/>
         <page name='Signal'/>
+        <page name='ConcurrentZip'/>
     </pages>
 </playground>

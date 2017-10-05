@@ -17,6 +17,8 @@
         return []
       }
 
+      print(directoryEnumrator.map { $0 as! String})
+
       let e1 = fileSystem.enumerator(atPath: standardizedRootPath)!
       var fileCount: Int = 0
       while e1.nextObject() != nil {
@@ -71,7 +73,7 @@
 
 //let __paths = FileManager.default.__walk(rootPath: "~/Develop/src/github.com/eure/pairs-gl-ios/worktree/develop")
 
-let paths = FileManager.default.walk(rootPath: "~/Develop/src/github.com/eure/pairs-gl-ios/worktree/develop")
+let paths = FileManager.default.walk(rootPath: "~/Desktop/")
 
 let swiftFilePaths = paths.lazy.filter { $0.hasSuffix(".swift") }
 
