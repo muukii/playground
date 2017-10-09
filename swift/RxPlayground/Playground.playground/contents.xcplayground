@@ -43,5 +43,7 @@
         <page name='filterLatestFrom'/>
         <page name='Signal'/>
         <page name='ConcurrentZip'/>
+        <page name='CycleViewModel'/>
+        <page name='BehaviorRelay'/>
     </pages>
 </playground>
