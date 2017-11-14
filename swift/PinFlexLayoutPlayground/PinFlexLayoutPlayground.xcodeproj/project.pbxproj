@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B0AA9D61FBB12D70056D188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0AA9D51FBB12D70056D188 /* AppDelegate.swift */; };
+		4B0AA9D81FBB12D70056D188 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0AA9D71FBB12D70056D188 /* ViewController.swift */; };
+		4B0AA9DB1FBB12D70056D188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA9D91FBB12D70056D188 /* Main.storyboard */; };
+		4B0AA9DD1FBB12D70056D188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA9DC1FBB12D70056D188 /* Assets.xcassets */; };
+		4B0AA9E01FBB12D70056D188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA9DE1FBB12D70056D188 /* LaunchScreen.storyboard */; };
+		C11A805A02707132D11DFB8E /* Pods_PinFlexLayoutPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B1EC5CEF063E3712A214B1 /* Pods_PinFlexLayoutPlayground.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B0AA9D21FBB12D70056D188 /* PinFlexLayoutPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinFlexLayoutPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0AA9D51FBB12D70056D188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B0AA9D71FBB12D70056D188 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B0AA9DA1FBB12D70056D188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B0AA9DC1FBB12D70056D188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B0AA9DF1FBB12D70056D188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B0AA9E11FBB12D70056D188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58B1EC5CEF063E3712A214B1 /* Pods_PinFlexLayoutPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinFlexLayoutPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76377B2F5B0A691AB77E9728 /* Pods-PinFlexLayoutPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinFlexLayoutPlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinFlexLayoutPlayground/Pods-PinFlexLayoutPlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		AE7A4C61088BE9C4A0D24046 /* Pods-PinFlexLayoutPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinFlexLayoutPlayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinFlexLayoutPlayground/Pods-PinFlexLayoutPlayground.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B0AA9CF1FBB12D70056D188 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C11A805A02707132D11DFB8E /* Pods_PinFlexLayoutPlayground.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B0AA9C91FBB12D70056D188 = {
+			isa = PBXGroup;
+			children = (
+				4B0AA9D41FBB12D70056D188 /* PinFlexLayoutPlayground */,
+				4B0AA9D31FBB12D70056D188 /* Products */,
+				792348CF6DA278EC09FC63AE /* Pods */,
+				555E03B2772191044642B7AB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4B0AA9D31FBB12D70056D188 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B0AA9D21FBB12D70056D188 /* PinFlexLayoutPlayground.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B0AA9D41FBB12D70056D188 /* PinFlexLayoutPlayground */ = {
+			isa = PBXGroup;
+			children = (
+				4B0AA9D51FBB12D70056D188 /* AppDelegate.swift */,
+				4B0AA9D71FBB12D70056D188 /* ViewController.swift */,
+				4B0AA9D91FBB12D70056D188 /* Main.storyboard */,
+				4B0AA9DC1FBB12D70056D188 /* Assets.xcassets */,
+				4B0AA9DE1FBB12D70056D188 /* LaunchScreen.storyboard */,
+				4B0AA9E11FBB12D70056D188 /* Info.plist */,
+			);
+			path = PinFlexLayoutPlayground;
+			sourceTree = "<group>";
+		};
+		555E03B2772191044642B7AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58B1EC5CEF063E3712A214B1 /* Pods_PinFlexLayoutPlayground.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		792348CF6DA278EC09FC63AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76377B2F5B0A691AB77E9728 /* Pods-PinFlexLayoutPlayground.debug.xcconfig */,
+				AE7A4C61088BE9C4A0D24046 /* Pods-PinFlexLayoutPlayground.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B0AA9D11FBB12D70056D188 /* PinFlexLayoutPlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B0AA9E41FBB12D70056D188 /* Build configuration list for PBXNativeTarget "PinFlexLayoutPlayground" */;
+			buildPhases = (
+				3FA243A9D50FD77CFF1BA52A /* [CP] Check Pods Manifest.lock */,
+				4B0AA9CE1FBB12D70056D188 /* Sources */,
+				4B0AA9CF1FBB12D70056D188 /* Frameworks */,
+				4B0AA9D01FBB12D70056D188 /* Resources */,
+				64BDBAA248308C4AFAFA9721 /* [CP] Embed Pods Frameworks */,
+				887F89EB7BAF6FC610A20CAF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PinFlexLayoutPlayground;
+			productName = PinFlexLayoutPlayground;
+			productReference = 4B0AA9D21FBB12D70056D188 /* PinFlexLayoutPlayground.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B0AA9CA1FBB12D70056D188 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = muukii;
+				TargetAttributes = {
+					4B0AA9D11FBB12D70056D188 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4B0AA9CD1FBB12D70056D188 /* Build configuration list for PBXProject "PinFlexLayoutPlayground" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B0AA9C91FBB12D70056D188;
+			productRefGroup = 4B0AA9D31FBB12D70056D188 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B0AA9D11FBB12D70056D188 /* PinFlexLayoutPlayground */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B0AA9D01FBB12D70056D188 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0AA9E01FBB12D70056D188 /* LaunchScreen.storyboard in Resources */,
+				4B0AA9DD1FBB12D70056D188 /* Assets.xcassets in Resources */,
+				4B0AA9DB1FBB12D70056D188 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FA243A9D50FD77CFF1BA52A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinFlexLayoutPlayground-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64BDBAA248308C4AFAFA9721 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PinFlexLayoutPlayground/Pods-PinFlexLayoutPlayground-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinFlexLayoutPlayground/Pods-PinFlexLayoutPlayground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		887F89EB7BAF6FC610A20CAF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinFlexLayoutPlayground/Pods-PinFlexLayoutPlayground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B0AA9CE1FBB12D70056D188 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0AA9D81FBB12D70056D188 /* ViewController.swift in Sources */,
+				4B0AA9D61FBB12D70056D188 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B0AA9D91FBB12D70056D188 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B0AA9DA1FBB12D70056D188 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4B0AA9DE1FBB12D70056D188 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B0AA9DF1FBB12D70056D188 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B0AA9E21FBB12D70056D188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B0AA9E31FBB12D70056D188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B0AA9E51FBB12D70056D188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76377B2F5B0A691AB77E9728 /* Pods-PinFlexLayoutPlayground.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PinFlexLayoutPlayground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.muukii.PinFlexLayoutPlayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B0AA9E61FBB12D70056D188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE7A4C61088BE9C4A0D24046 /* Pods-PinFlexLayoutPlayground.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PinFlexLayoutPlayground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.muukii.PinFlexLayoutPlayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B0AA9CD1FBB12D70056D188 /* Build configuration list for PBXProject "PinFlexLayoutPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B0AA9E21FBB12D70056D188 /* Debug */,
+				4B0AA9E31FBB12D70056D188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B0AA9E41FBB12D70056D188 /* Build configuration list for PBXNativeTarget "PinFlexLayoutPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B0AA9E51FBB12D70056D188 /* Debug */,
+				4B0AA9E61FBB12D70056D188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B0AA9CA1FBB12D70056D188 /* Project object */;
+}
