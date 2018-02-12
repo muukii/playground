@@ -8,24 +8,23 @@ let (_signal, observer) = Signal<String, NoError>.pipe()
 
 let (s, _) = Signal<[Int], NoError>.pipe()
 
-_signal.uniqueValues()
-
-let p = _signal
-  .map {
-    $0 + "hoge"
-  }
+let poge = _signal
   .producer
-
+  .flatMap(FlattenStrategy.merge) { (v) in
+    SignalProducer<String, NoError>.init({ (o, l) in
+      o.send(value: "")
+      o.sendCompleted()
+    })
+}
 
 do {
-  let p = _signal
+  let p = poge
     .map {
       $0 + "hoge"
     }
     .producer
-    .collect(count: 1)
 
-  observer.send(value: "aa")
+//  observer.send(value: "aa")
 //
   p.start { (e) in
     print(e)
