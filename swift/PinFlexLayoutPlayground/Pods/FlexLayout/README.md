@@ -1,16 +1,20 @@
 <p align="center">
-  <a href="https://github.com/lucdion/FlexLayout"><img src="docs_markdown/images/flexlayout-logo-2.png" alt="FlexLayout" width="270"/></a>
+  <a href="https://github.com/layoutBox/FlexLayout"><img src="docs_markdown/images/flexlayout-logo-text.png" alt="FlexLayout" width="210"/></a>
 </p>
 
-<h1 align="center" style="color: #376C9D; font-family: Arial Black, Gadget, sans-serif; font-size: 3em">FlexLayout</h1>
- 
 <p align="center">
   <a href=""><img src="https://img.shields.io/cocoapods/p/FlexLayout.svg?style=flat" /></a>
-  <a href="https://travis-ci.org/lucdion/FlexLayout"><img src="https://travis-ci.org/lucdion/FlexLayout.svg?branch=master" /></a>
- <a href='https://coveralls.io/github/lucdion/FlexLayout?branch=master'><img src='https://coveralls.io/repos/github/lucdion/FlexLayout/badge.svg?branch=master' alt='Coverage Status' /></a>
+  <a href="https://travis-ci.org/layoutBox/FlexLayout"><img src="https://travis-ci.org/layoutBox/FlexLayout.svg?branch=master" /></a>
+ <a href='https://coveralls.io/github/layoutBox/FlexLayout?branch=master'><img src='https://coveralls.io/repos/github/layoutBox/FlexLayout/badge.svg?branch=master' alt='Coverage Status' /></a>
   <a href='https://img.shields.io/cocoapods/v/FlexLayout.svg'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
   <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" /></a>
-  <a href="https://raw.githubusercontent.com/lucdion/FlexLayout/master/LICENSE"><img src="https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat" /></a>
+<a href="https://github.com/layoutBox/FlexLayout/issues"><img src="https://img.shields.io/github/issues/layoutBox/FlexLayout.svg?style=flat" /></a>
+</p></p>
+
+<p align="center">
+  <a href='https://cocoapods.org/pods/FlexLayout'><img src="https://img.shields.io/cocoapods/v/FlexLayout.svg" /></a>
+  <a href='https://cocoapods.org/pods/FlexLayout'><img src="https://img.shields.io/cocoapods/dm/FlexLayout.svg" /></a>
+  <a href='https://cocoapods.org/pods/FlexLayout'><img src="https://img.shields.io/cocoapods/dt/FlexLayout.svg" /></a>
 </p>
 
 <br>
@@ -68,7 +72,8 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
 
 <br>
  
-## FlexLayout Introduction examples <a name="intro_usage_example"></a>
+<a name="intro_usage_example"></a>
+## FlexLayout Introduction examples 
 ###### Example 1:
 This example will layout multiples views using column and row flexbox containers.
 
@@ -79,7 +84,7 @@ Two steps to use a flexbox container:
 	1. First you must layout the flexbox container, i.e. position it and optionally set its size. 
 	2. Then layout the flexbox children using Flex method `layout()`.
 
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_all.png" alt="FlexLayout example"/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_all.png" alt="FlexLayout example"/></a>
 
 ```swift
 fileprivate let rootFlexContainer = UIView()
@@ -113,7 +118,7 @@ override func layoutSubviews() {
 
     // 1) Layout the flex container. This example use PinLayout for that purpose, but it could be done 
     //    also by setting the rootFlexContainer's frame:
-    //       rootFlexContainer.frame = CGRect(x: 0, y: topLayoutGuide, 
+    //       rootFlexContainer.frame = CGRect(x: 0, y: 0, 
     //                                        width: frame.width, height: rootFlexContainer.height)
     rootFlexContainer.pin.top().left().width(100%).marginTop(topLayoutGuide)
 
@@ -122,14 +127,15 @@ override func layoutSubviews() {
 }
 ``` 
 
-:pushpin: This example is available in the [Examples App](#examples_app). See complete [source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift)
+:pushpin: This example is available in the [Examples App](#examples_app). See complete [source code](https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift)
 
 </br>
 
-###### Example 2: <a name="intro_usage_example_raywenderlich"></a>
+<a name="intro_usage_example_raywenderlich"></a>
+###### Example 2: 
 The example implements the [Ray Wenderlich Yoga Tutorial](https://www.raywenderlich.com/161413/yoga-tutorial-using-cross-platform-layout-engine) screen using FlexLayout. 
 
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=200/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=200/></a>
 
 ```swift
 init() {
@@ -140,42 +146,42 @@ init() {
         flex.addItem(episodeImageView).grow(1).backgroundColor(.gray)
         
         // Summary row
-        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+        flex.addItem().direction(.row).padding(padding).define { (flex) in
             flex.addItem(summaryPopularityLabel).grow(1)
             
-            flex.addItem().direction(.row).justifyContent(.spaceBetween).grow(2).define({ (flex) in
+            flex.addItem().direction(.row).justifyContent(.spaceBetween).grow(2).define { (flex) in
                 flex.addItem(yearLabel)
                 flex.addItem(ratingLabel)
                 flex.addItem(lengthLabel)
-            })
+            }
             
             flex.addItem().width(100).height(1).grow(1)
-        })
+        }
         
         // Title row
-        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+        flex.addItem().direction(.row).padding(padding).define { (flex) in
             flex.addItem(episodeIdLabel)
             flex.addItem(episodeTitleLabel).marginLeft(20)
-        })
+        }
         
         // Description section
-        flex.addItem().paddingHorizontal(paddingHorizontal).define({ (flex) in
+        flex.addItem().paddingHorizontal(paddingHorizontal).define { (flex) in
             flex.addItem(descriptionLabel)
             flex.addItem(castLabel)
             flex.addItem(creatorsLabel)
-        })
+        }
         
         // Action row
-        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+        flex.addItem().direction(.row).padding(padding).define { (flex) in
             flex.addItem(addActionView)
             flex.addItem(shareActionView)
-        })
+        }
         
         // Tabs row
-        flex.addItem().direction(.row).padding(padding).define({ (flex) in
+        flex.addItem().direction(.row).padding(padding).define { (flex) in
             flex.addItem(episodesTabView)
             flex.addItem(moreTabView)
-        })
+        }
         
         // Shows TableView
         flex.addItem(showsTableView).grow(1)
@@ -197,12 +203,12 @@ override func layoutSubviews() {
 }
 ``` 
 
-:pushpin: This example is available in the [Examples App](#examples_app). See complete [source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift)
+:pushpin: This example is available in the [Examples App](#examples_app). See complete [source code](https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift)
 
 <br>
 
-## FlexLayout principles and philosophy <a name="introduction"></a>
-
+<a name="introduction"></a>
+## FlexLayout principles and philosophy 
 * Flexbox layouting is simple, powerful and fast.
 * FlexLayout syntax is concise and chainable.
 * FlexLayout/yoga is incredibly fast, it's even faster than manual layout. See [Performance](#performance).
@@ -213,9 +219,10 @@ NOTE: FlexLayout wraps [facebook/yoga](https://github.com/facebook/yoga) impleme
 
 <br>
 
-# FlexLayout's Performance <a name="performance"></a>
+<a name="performance"></a>
+# FlexLayout's Performance 
 
-FlexLayout's performance has been measured using the [Layout Framework Benchmark](https://github.com/lucdion/LayoutFrameworkBenchmark). FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare their performance. 
+FlexLayout's performance has been measured using the [Layout Framework Benchmark](https://github.com/layoutBox/LayoutFrameworkBenchmark). FlexLayout and [PinLayout](https://github.com/mirego/PinLayout) has been added to this benchmark to compare their performance. 
 
 As you can see in the following chart, FlexLayout and PinLayout's performance are faster or equal to manual layouting. FlexLayout is **between 8x and 11x faster than auto layout** and PinLayout **between 12x and 16x faster than auto layout**, and this for all types of iPhone (5/6/6S/7)
 
@@ -273,17 +280,24 @@ NOTE: **FlexLayout** doesn't support the flexbox `order` property. The order is 
 
 <br>
 
-# Documentation <a name="documentation"></a>
+<a name="documentation"></a>
+# Documentation 
 
 Flexbox is pretty easy and straightforward to use. The defining aspect of the flexbox is the ability to alter its items, width, height to best fill the available space on any display device. A flex container expands its items to fill the available free space or shrinks them to prevent overflow.
 
 The flex layout is constituted of parent container referred as **flex container** and its immediate children which are called **flex items**. A flex item can also be a flex container, i.e. it is possible to add other flex items to it.
 
-| Flexbox term        | Definition |
-|---------------------|------------|
-| **`main-axis`** | The main axis of a flex container is the primary axis along which flex items are laid out. The main-axis direction is set using the `direction()` property. |
-| **`cross-axis`** | The axis perpendicular to the main axis is called the cross axis. Its direction depends on the main axis direction |
-	
+##### Axes
+When working with StackViews you need to think in terms of two axes — the main axis and the cross axis. The main axis is defined by StackView's `direction` property, and the cross axis runs perpendicular to it.
+
+| StackView direction | Axes |
+|---------------------|:------------------:|---------|
+| **column** (default) 	| <img src="docs_markdown/images/axis-column.png" width="200"/> |
+| **row** | <img src="docs_markdown/images/axis-row.png" width="200"/>|
+
+
+##### Sections
+
 In the following sections we will see:
 
 1. How to create, modify and defines flex containers and items.
@@ -291,11 +305,12 @@ In the following sections we will see:
 3. Flexbox item's properties
 
 
-:pushpin: This document is a guide that explains how to use FlexLayout. You can also checks the [**FlexLayout's API documentation**](https://lucdion.github.io/FlexLayout/1.1/Classes/Flex.html).
+:pushpin: This document is a guide that explains how to use FlexLayout. You can also checks the [**FlexLayout's API documentation**](https://layoutBox.github.io/FlexLayout/1.1/Classes/Flex.html).
 
 <br>
 
-## 1. Creation, modification and definition of flexbox items <a name="create_modify_define_containers"></a>
+<a name="create_modify_define_containers"></a>
+## 1. Creation, modification and definition of flexbox items 
 
 ### addItem(:UIView)
 - Applies to: `flex containers`
@@ -372,29 +387,30 @@ The same results can also be obtained without using the `define()` method, but t
  
 <br>
  
-### Accessing flex item's UIView <a name="accessing_flexbox_view"></a>
-It is possible to access the flex items's UIView using `flex.view`. This is particularly usefull when using `flex.define()` method.
+<a name="accessing_flexbox_view"></a>
+### Accessing flex item's UIView 
+It is possible to access the flex items's UIView using `flex.view`. This is particularly useful when using `flex.define()` method.
 
 ###### Example:
 This example creates a flexbox container and sets its alpha to 0.8.
 
 ```swift
-    flex.createBox().direction(.row).padding(20).alignItems(.center).define({ (flex) in
-        flex.createBox().width(50).height(50).define({ (flex) in
-            flex.view.alpha = 0.8
-        }}
-    })
+    view.flex.direction(.row).padding(20).alignItems(.center).define { (flex) in
+        flex.addItem().width(50).height(50).define { (flex) in
+            flex.view?.alpha = 0.8
+        }
+    }
 ``` 
 
 Another possible solution:
 
 ```swift
-    flex.createBox().direction(.row).padding(20).alignItems(.center).define({ (flex) in
+    view.flex.direction(.row).padding(20).alignItems(.center).define { (flex) in
         let container = UIView()
         container.alpha = 0.8
         
-        flex.addChild(container).width(50).height(50)
-    })
+        flex.addItem(container).width(50).height(50)
+    }
 ``` 
 <br>
 
@@ -421,7 +437,8 @@ The method will layout the flex container's children.
 
 <br>
 
-## 2. Flexbox containers properties  <a name="containers_properties"></a>
+<a name="containers_properties"></a>
+## 2. Flexbox containers properties  
 This section describes all flex container's properties.
 
 ### direction() 
@@ -450,53 +467,24 @@ The `direction` property establishes the main-axis, thus defining the direction 
 
 ###### Usage examples:
 ```swift
-  view.flex.direction(.column)  // Not required, defaut value. 
+  view.flex.direction(.column)  // Not required, default value. 
   view.flex.direction(.row)
 ```
 
 ###### Example 1:
-This example center three views of 40 pixels tall with a padding of 10 pixels.  
-[Example source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Example1/Example1View.swift)
+This example center three buttons with a margin of 10 pixels between them.  
+[Example source code](https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Example1/Example1View.swift)
 
 <img src="docs_markdown/images/flexlayout_example_column_center.png" width="160"/>
 
 ```swift
     rootFlexContainer.flex.justifyContent(.center).padding(10).define { (flex) in
-        flex.addItem(button1).height(40).marginTop(10)
-        flex.addItem(button2).height(40).marginTop(10)
-        flex.addItem(button3).height(40).marginTop(10)
+        flex.addItem(button1)
+        flex.addItem(button2).marginTop(10)
+        flex.addItem(button3).marginTop(10)
     }
 ``` 
 
-<br/>
-
-### wrap()
-- Applies to: `flex containers`
-- Values: `noWrap` / `wrap` / `wrapReverse`
-- Default value: `noWrap`
-- CSS name: `flex-wrap` 
-
-**Method:**
-
-* **`wrap(_: Wrap)`**  
-The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.
-
-By default, the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in
-
-Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.
-
-
-|                     	| direction(.column) | direction(.row) | Description|
-|---------------------	|:------------------:|:---------------:|--------------|
-| **noWrap** (default) 	| <img src="docs_markdown/images/flexlayout-wrap-column-nowrap.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-nowrap.png" width="180"/>| Single-line which may cause the container to overflow. NEW: Flex items are displayed in one row and by default they are shrunk to fit the flex container’s width |
-| **wrap** | <img src="docs_markdown/images/flexlayout-wrap-column-wrap.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-wrap.png" width="180"/>| Multi-lines, direction is defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and top-to-bottom  |
-| **wrapReverse**	| <img src="docs_markdown/images/flexlayout-wrap-column-wrapReverse.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-wrapReverse.png" width="180"/>| Multi-lines, opposite to direction defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and bottom-to-top |
-
-###### Usage examples:
-```swift
-  view.flex.wrap(.nowrap)  // Not required, defaut value. 
-  view.flex.wrap(.wrap)
-```
 <br/>
 
 ### justifyContent()
@@ -520,7 +508,7 @@ The `justifyContent` property defines the alignment along the main-axis of the c
 
 ###### Usage examples:
 ```swift
-  view.flex.justifyContent(.start)  // defaut value. 
+  view.flex.justifyContent(.start)  // default value. 
   view.flex.justifyContent(.center)
 ```
 <br/>
@@ -560,6 +548,35 @@ The `alignSelf` property controls how a child aligns in the cross direction, ove
 
 The `auto` value means use the flex container `alignItems` property. See `alignItems` for documentation of the other values.
 
+<br/>
+
+### wrap()
+- Applies to: `flex containers`
+- Values: `noWrap` / `wrap` / `wrapReverse`
+- Default value: `noWrap`
+- CSS name: `flex-wrap` 
+
+**Method:**
+
+* **`wrap(_: Wrap)`**  
+The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.
+
+By default, the flex container fits all flex items into one line. Using this property we can change that. We can tell the container to lay out its items in single or multiple lines, and the direction the new lines are stacked in
+
+Reminder: the cross axis is the axis perpendicular to the main axis. Its direction depends on the main axis direction.
+
+
+|                     	| direction(.column) | direction(.row) | Description|
+|---------------------	|:------------------:|:---------------:|--------------|
+| **noWrap** (default) 	| <img src="docs_markdown/images/flexlayout-wrap-column-nowrap.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-nowrap.png" width="180"/>| Single-line which may cause the container to overflow. NEW: Flex items are displayed in one row and by default they are shrunk to fit the flex container’s width |
+| **wrap** | <img src="docs_markdown/images/flexlayout-wrap-column-wrap.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-wrap.png" width="180"/>| Multi-lines, direction is defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and top-to-bottom  |
+| **wrapReverse**	| <img src="docs_markdown/images/flexlayout-wrap-column-wrapReverse.png" width="130"/>| <img src="docs_markdown/images/flexlayout-wrap-row-wrapReverse.png" width="180"/>| Multi-lines, opposite to direction defined by `direction()`. NEW: Flex items are displayed in multiple rows if needed from left-to-right and bottom-to-top |
+
+###### Usage examples:
+```swift
+  view.flex.wrap(.nowrap)  // Not required, default value. 
+  view.flex.wrap(.wrap)
+```
 <br/>
 
 ### alignContent()
@@ -607,7 +624,8 @@ Direction defaults to Inherit on all nodes except the root which defaults to LTR
 
 <br>
 
-## 3. Flexbox items properties <a name="intems_properties"></a>
+<a name="intems_properties"></a>
+## 3. Flexbox items properties 
 This section describe all flex items's properties.
 
 :pushpin: Remembers that flex containers are also flex items, so all these properties also apply to containers.
@@ -680,7 +698,7 @@ FlexLayout automatically includes the UIView when:
 **Method:**
 
 * **`markDirty()`**  
-The framework is so highly optimized, that flex item are layouted only when a flex property is changed and when flex container size change. In the event that you want to force FlexLayout to do a layout of a flex item, you can mark it as dirty using `markDirty()`. 
+The framework is so highly optimized, that flex items are layouted only when a flex property is changed and when flex container size change. In the event that you want to force FlexLayout to do a layout of a flex item, you can mark it as dirty using `markDirty()`. 
 
   Dirty flag propagates to the root of the flexbox tree ensuring that when any item is invalidated its whole subtree will be re-calculated.
 
@@ -729,7 +747,8 @@ Item natural size, considering only properties of the view itself. Independent o
 
 <br>
 
-## 4. Absolute positioning  <a name="absolute_positioning"></a>
+<a name="absolute_positioning"></a>
+## 4. Absolute positioning  
 - Applies to: `flex items`
 - Parameter: CGFloat
 
@@ -769,30 +788,32 @@ Using these properties you can control the size and position of an absolute item
 ```swift
   view.flex.position(.absolute).top(10).right(10).width(100).height(50)
 ```
-:pushpin: See the "Yoga C" example in the [Examples App](#examples_app). [Source code](https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift)
+:pushpin: See the "Yoga C" example in the [Examples App](#examples_app). [Source code](https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift)
 
 <br>
 
-## 5. Adjusting the size  <a name="adjusting_size"></a> 
+<a name="adjusting_size"></a> 
+## 5. Adjusting the size  
 
-### Width and height and size <a name="width_height_size"></a>
+<a name="width_height_size"></a>
+### Width and height and size 
 
 FlexLayout has methods to set the view’s height and width.
 
 **Methods:**
 
-* **`width(_ width: CGFloat)`**  
-The value specifies the view's width in pixels. The value must be non-negative.
+* **`width(_ width: CGFloat?)`**  
+The value specifies the view's width in pixels. The value must be non-negative. Call `width(nil)` to reset the property.
 * **`width(_ percent: FPercent)`**  
-The value specifies the view's width in percentage of its container width. The value must be non-negative.
-* **`height(_ height: CGFloat)`**  
-The value specifies the view's height in pixels. The value must be non-negative.
+The value specifies the view's width in percentage of its container width. The value must be non-negative. Call `width(nil)` to reset the property.
+* **`height(_ height: CGFloat?)`**  
+The value specifies the view's height in pixels. The value must be non-negative. Call `height(nil)` to reset the property.
 * **`height(_ percent: FPercent)`**  
-The value specifies the view's height in percentage of its container height. The value must be non-negative.
-* **`size(_ size: CGSize)`**  
-The value specifies view's width and the height in pixels. Values must be non-negative.
-* **`size(_ sideLength: CGFloat)`**  
-The value specifies the width and the height of the view in pixels, creating a square view. Values must be non-negative.
+The value specifies the view's height in percentage of its container height. The value must be non-negative. Call `height(nil)` to reset the property.
+* **`size(_ size: CGSize?)`**  
+The value specifies view's width and the height in pixels. Values must be non-negative. Call `size(nil)` to reset the property.
+* **`size(_ sideLength: CGFloat?)`**  
+The value specifies the width and the height of the view in pixels, creating a square view. Values must be non-negative. Call `size(nil)` to reset the property.
 
 
 ###### Usage examples:
@@ -805,7 +826,8 @@ The value specifies the width and the height of the view in pixels, creating a s
 ```
 <br>
 
-### minWidth(), maxWidth(), minHeight(), maxHeight() <a name="minmax_width_height_size"></a>
+<a name="minmax_width_height_size"></a>
+### minWidth(), maxWidth(), minHeight(), maxHeight() 
 
 FlexLayout has methods to set the view’s minimum and maximum width, and minimum and maximum height. 
 
@@ -820,22 +842,22 @@ Another case where Min and Max dimension constraints are useful is when using `a
 
 **Methods:**
 
-* **`minWidth(_ width: CGFloat)`** 
-The value specifies the view's minimum width of the view in pixels. The value must be non-negative.
-* **`minWidth(_ percent: FPercent)`** 
-The value specifies the view's minimum width of the view in percentage of its container width. The value must be non-negative.
-* **`maxWidth(_ width: CGFloat)`**  
-The value specifies the view's maximum width of the view in pixels. The value must be non-negative.
+* **`minWidth(_ width: CGFloat?)`**  
+The value specifies the view's minimum width of the view in pixels. The value must be non-negative. Call `minWidth(nil)` to reset the property.
+* **`minWidth(_ percent: FPercent)`**  
+The value specifies the view's minimum width of the view in percentage of its container width. The value must be non-negative. Call `minWidth(nil)` to reset the property..
+* **`maxWidth(_ width: CGFloat?)`**  
+The value specifies the view's maximum width of the view in pixels. The value must be non-negative. Call `maxWidth(nil)` to reset the property.
 * **`maxWidth(_ percent: FPercent)`**  
-The value specifies the view's maximum width of the view in percentage of its container width. The value must be non-negative.
-* **`minHeight(_ height: CGFloat)`**
-The value specifies the view's minimum height of the view in pixels. The value must be non-negative.
-* **`minHeight(_ percent: FPercent)`**
-The value specifies the view's minimum height of the view in percentage of its container height. The value must be non-negative.
-* **`maxHeight(_ height: CGFloat)`**
-The value specifies the view's maximum height of the view in pixels. The value must be non-negative.
-* **`maxHeight(_ percent: FPercent)`**
-The value specifies the view's maximum height of the view in percentage of its container height. The value must be non-negative.
+The value specifies the view's maximum width of the view in percentage of its container width. The value must be non-negative. Call `maxWidth(nil)` to reset the property.
+* **`minHeight(_ height: CGFloat?)`**  
+The value specifies the view's minimum height of the view in pixels. The value must be non-negative. Call `minHeight(nil)` to reset the property.
+* **`minHeight(_ percent: FPercent)`**  
+The value specifies the view's minimum height of the view in percentage of its container height. The value must be non-negative. Call `minHeight(nil)` to reset the property.
+* **`maxHeight(_ height: CGFloat?)`**  
+The value specifies the view's maximum height of the view in pixels. The value must be non-negative. Call `maxHeight(nil)` to reset the property.
+* **`maxHeight(_ percent: FPercent)`**  
+The value specifies the view's maximum height of the view in percentage of its container height. The value must be non-negative. Call `maxHeight(nil)` to reset the property.
    
 ###### Usage examples:
 ```swift
@@ -848,13 +870,15 @@ The value specifies the view's maximum height of the view in percentage of its c
 ```
 <br>
 
-### aspectRatio() <a name="aspect_ratio"></a>
+<a name="aspect_ratio"></a>
+### aspectRatio() 
 AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing one dimension of an element and an aspect ratio, this is very common when it comes to images, videos, and other media types. AspectRatio accepts any floating point value > 0, the default is undefined.
 
 * AspectRatio is defined as the ratio between the width and the height of a node e.g. if a node has an aspect ratio of 2 then its width is twice the size of its height.
 * AspectRatio respects the Min and Max dimensions of an item.
 * AspectRatio has higher priority than `grow`.
 * If AspectRatio, Width, and Height are set then the cross dimension is overridden
+* Call `aspectRatio(nil)` to reset the property.
 
    
 ###### Usage examples:
@@ -864,32 +888,42 @@ AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRati
 <br/>
 
 
-## 6. Margins <a name="margins"></a>
+<a name="margins"></a>
+## 6. Margins 
 By applying Margin to an item you specify the offset a certain edge of the item should have from it’s closest sibling or parent.
 
 **Methods:**
 
-* `marginTop(_ value: CGFloat)`
-* `marginLeft(_ value: CGFloat)`
-* `marginBottom(_ value: CGFloat)`
-* `marginRight(_ value: CGFloat)`
-* `marginStart(_ value: CGFloat)`
-* `marginEnd(_ value: CGFloat)`
-* `marginHorizontal(_ value: CGFloat)`
-* `marginVertical(_ value: CGFloat)`
-* `margin(_ insets: UIEdgeInsets)`  
+* **`marginTop(_ value: CGFloat)`, `marginTop(_ percent: FPercent)`**  
+Top margin specify the offset the top edge of the item should have from it’s closest sibling (item) or parent (container).
+* **`marginLeft(_ value: CGFloat)`, `marginLeft(_ percent: FPercent)`**  
+Left margin specify the offset the left edge of the item should have from it’s closest sibling (item) or parent (container).
+* **`marginBottom(_ value: CGFloat)`, `marginBottom(_ percent: FPercent)`**  
+Bottom margin specify the offset the bottom edge of the item should have from it’s closest sibling (item) or parent (container)
+* **`marginRight(_ value: CGFloat)`, `marginRight(_ percent: FPercent)`**  
+Right margin specify the offset the right edge of the item should have from it’s closest sibling (item) or parent (container).
+* **`marginStart(_ value: CGFloat)`, `marginStart(_ percent: FPercent)`**  
+Set the start margin. In LTR direction, start margin specify the **left** margin. In RTL direction, start margin specify the **right** margin.
+* **`marginEnd(_ value: CGFloat)`, `marginEnd(_ percent: FPercent)`**  
+Set the end margin. In LTR direction, end margin specify the **right** margin. In RTL direction, end margin specify the **left** margin.
+* **`marginHorizontal(_ value: CGFloat)`, `marginHorizontal(_ percent: FPercent)`**  
+Set the left, right, start and end margins to the specified value.
+* **`marginVertical(_ value: CGFloat)`, `marginVertical(_ percent: FPercent)`**  
+Set the top and bottom margins to the specified value.
+* **`margin(_ insets: UIEdgeInsets)`**
 Set all margins using an UIEdgeInsets. This method is particularly useful to set all margins using iOS 11 `UIView.safeAreaInsets`.
-* `margin(_ insets: NSDirectionalEdgeInsets)`  
+* **`margin(_ insets: NSDirectionalEdgeInsets)`**
 Set all margins using an NSDirectionalEdgeInsets. This method is useful to set all margins using iOS 11 `UIView. directionalLayoutMargins` when layouting a view supporting RTL/LTR languages.
-* `margin(_ value: CGFloat) `
-* `margin(_ vertical: CGFloat, _ horizontal: CGFloat)`
-* `margin(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)`
-* `margin(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) `
+* **`margin(_ value: CGFloat) `**  
+Set all margins to the specified value.
+* **`margin(_ vertical: CGFloat, _ horizontal: CGFloat)`**
+* **`margin(_ top: CGFloat, _ horizontal: CGFloat, _ bottom: CGFloat)`**
+* **`margin(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat)`**
 
 ###### Usage examples:
 ```swift
   view.flex.margin(20)
-  view.flex.marginBottom(20)
+  view.flex.marginTop(20%).marginLeft(20%)
   view.flex.marginHorizontal(20)
   view.flex.margin(safeAreaInsets)
   view.flex.margin(10, 12, 0, 12)
@@ -897,7 +931,8 @@ Set all margins using an NSDirectionalEdgeInsets. This method is useful to set a
 
 <br>
 
-## 7. Paddings <a name="paddings"></a>
+<a name="paddings"></a>
+## 7. Paddings 
 
 Padding specify the **offset children should have** from a certain edge on the container. 
 
@@ -931,7 +966,8 @@ Set all paddings using an NSDirectionalEdgeInsets. This method is particularly u
 
 <br>
 
-## 8. Borders <a name="borders"></a>
+<a name="borders"></a>
+## 8. Borders 
 Border behaves nearly identically to Padding and is only separate from Padding to make it easier to implement border effect such as color.
 
 **Methods:**
@@ -947,7 +983,8 @@ Border behaves nearly identically to Padding and is only separate from Padding t
 <br>
 
 
-## 9. Extra UIView methods <a name="uiview_methods"></a>
+<a name="uiview_methods"></a>
+## 9. Extra UIView methods 
 FlexLayout also adds methods to set common UIView properties.
 
 **Methods:**
@@ -965,30 +1002,32 @@ Set the flex item's UIView background color.
 
 <br>
 
-
-## FlexLayout API Documentation <a name="api_documentation"></a>
-The [**complete FlexLayout API is available here**](https://lucdion.github.io/FlexLayout/1.1/Classes/Flex.html). 
+<a name="api_documentation"></a>
+## FlexLayout API Documentation 
+The [**complete FlexLayout API is available here**](https://layoutBox.github.io/FlexLayout/1.1/Classes/Flex.html). 
 
 <br>
 
-## Example App <a name="examples_app"></a>
+<a name="examples_app"></a>
+## Example App 
 The FlexLayout's Example App exposes some usage example of FlexLayout.   
 [See the Example App section to get more information](docs_markdown/examples.md).
 
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_portrait.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/TableViewExample"><img src="docs_markdown/images/examples/flexlayout_exampleapp_uitableview.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/CollectionViewExample/HouseCell.swift"><img src="docs_markdown/images/examples/flexlayout_example_collectionview.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_c.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_objc.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_java.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_csharp.png" width=90/></a>
-<a href="https://github.com/lucdion/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_android.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/Intro/IntroView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_intro_portrait.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/RaywenderlichTutorial/RaywenderlichTutorialView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_ray_wenderlich_tutorial.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/TableViewExample"><img src="docs_markdown/images/examples/flexlayout_exampleapp_uitableview.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/CollectionViewExample/HouseCell.swift"><img src="docs_markdown/images/examples/flexlayout_example_collectionview.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleA/YogaExampleAView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_c.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleB/YogaExampleBView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_objc.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleC/YogaExampleCView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_java.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleD/YogaExampleDView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_csharp.png" width=90/></a>
+<a href="https://github.com/layoutBox/FlexLayout/blob/master/Example/FlexLayoutSample/UI/Examples/YogaExampleE/YogaExampleEView.swift"><img src="docs_markdown/images/examples/flexlayout_exampleapp_yoga_android.png" width=90/></a>
 
 <br>
 
 
-## FAQ <a name="faq"></a>
+<a name="faq"></a>
+## FAQ 
 
 *  **Q: The flex item overflows or is bigger than its container?**  
    **A:** By default the flex item's `shrink` value is 0, which keeps the item's current size in the main-axis direction. So that may cause the item to overflow its flex container. To fix that you just have to specify a `shrink` value bigger than 0:  
@@ -1019,9 +1058,9 @@ The FlexLayout's Example App exposes some usage example of FlexLayout.
 
 <br/>
 
-
-## Contributing, comments, ideas, suggestions, issues, .... <a name="comments"></a>
-For any **comments**, **ideas**, **suggestions**, simply open an [issue](https://github.com/lucdion/FlexLayout/issues). 
+<a name="comments"></a>
+## Contributing, comments, ideas, suggestions, issues, .... 
+For any **comments**, **ideas**, **suggestions**, simply open an [issue](https://github.com/layoutBox/FlexLayout/issues). 
 
 For **issues**, please have a look at [Yoga's issues](https://github.com/facebook/yoga/issues). Your issue may have been already reported. If not, it may be a FlexLayout issue. In this case open an issue and we'll let you know if the issue is related to Yoga's implementation. 
 
@@ -1031,8 +1070,8 @@ If you'd like to contribute, you're welcome!
 
 <br>
 
-
-## Installation <a name="installation"></a>
+<a name="installation"></a>
+## Installation 
 
 ### CocoaPods
 
@@ -1051,12 +1090,12 @@ To integrate FlexLayout into your Xcode project using Carthage:
 
 1. Specify in your `Cartfile`:  
 ```
-github "lucdion/FlexLayout"
+github "layoutBox/FlexLayout"
 ```
 
 2. Run `carthage update` to build frameworks.
-3. Add built `FlexLayout.framework` and `YogaKit.framework` frameworks in your Xcode project in the **Embedded Binaries** section. You should have this once it is done: <img src="docs_markdown/images/carthage_frameworks.png" width="500"/>
-4. **Add the preprocessor macro `USE_YOGAKIT_PACKAGE` in your Xcode project**. Target > Build Settings > Preprocessor Macros. add `USE_YOGAKIT_PACKAGE` in the **Debug** and the **Release** entry.
+3. Add built `FlexLayout.framework` in your Xcode project in the **Embedded Binaries** section. 
+
 
 <br/>
 
@@ -1068,4 +1107,3 @@ FlexLayout recent history is available in the are documented in the [CHANGELOG](
 ## License
 BSD 3-Clause License 
 
-[![analytics](http://www.google-analytics.com/collect?v=1&t=pageview&_s=1&dl=https%3A%2F%2Fgithub.com%2Flucdion%2FFlexLayout&tid=UA-106565693-1)]()

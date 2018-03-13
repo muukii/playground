@@ -12,6 +12,7 @@
 		4B0AA9DB1FBB12D70056D188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA9D91FBB12D70056D188 /* Main.storyboard */; };
 		4B0AA9DD1FBB12D70056D188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA9DC1FBB12D70056D188 /* Assets.xcassets */; };
 		4B0AA9E01FBB12D70056D188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA9DE1FBB12D70056D188 /* LaunchScreen.storyboard */; };
+		4BE37D6F204EF5E700A4C070 /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE37D6E204EF5E700A4C070 /* MyLabel.m */; };
 		C11A805A02707132D11DFB8E /* Pods_PinFlexLayoutPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B1EC5CEF063E3712A214B1 /* Pods_PinFlexLayoutPlayground.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,9 @@
 		4B0AA9DC1FBB12D70056D188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B0AA9DF1FBB12D70056D188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B0AA9E11FBB12D70056D188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BE37D6C204EF5E600A4C070 /* PinFlexLayoutPlayground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PinFlexLayoutPlayground-Bridging-Header.h"; sourceTree = "<group>"; };
+		4BE37D6D204EF5E700A4C070 /* MyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLabel.h; sourceTree = "<group>"; };
+		4BE37D6E204EF5E700A4C070 /* MyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLabel.m; sourceTree = "<group>"; };
 		58B1EC5CEF063E3712A214B1 /* Pods_PinFlexLayoutPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinFlexLayoutPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76377B2F5B0A691AB77E9728 /* Pods-PinFlexLayoutPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinFlexLayoutPlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinFlexLayoutPlayground/Pods-PinFlexLayoutPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		AE7A4C61088BE9C4A0D24046 /* Pods-PinFlexLayoutPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinFlexLayoutPlayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinFlexLayoutPlayground/Pods-PinFlexLayoutPlayground.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,10 +67,13 @@
 			children = (
 				4B0AA9D51FBB12D70056D188 /* AppDelegate.swift */,
 				4B0AA9D71FBB12D70056D188 /* ViewController.swift */,
+				4BE37D6D204EF5E700A4C070 /* MyLabel.h */,
+				4BE37D6E204EF5E700A4C070 /* MyLabel.m */,
 				4B0AA9D91FBB12D70056D188 /* Main.storyboard */,
 				4B0AA9DC1FBB12D70056D188 /* Assets.xcassets */,
 				4B0AA9DE1FBB12D70056D188 /* LaunchScreen.storyboard */,
 				4B0AA9E11FBB12D70056D188 /* Info.plist */,
+				4BE37D6C204EF5E600A4C070 /* PinFlexLayoutPlayground-Bridging-Header.h */,
 			);
 			path = PinFlexLayoutPlayground;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 				TargetAttributes = {
 					4B0AA9D11FBB12D70056D188 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -186,15 +194,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PinFlexLayoutPlayground/Pods-PinFlexLayoutPlayground-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
-				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-13/iOS/RevealServer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -223,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE37D6F204EF5E700A4C070 /* MyLabel.m in Sources */,
 				4B0AA9D81FBB12D70056D188 /* ViewController.swift in Sources */,
 				4B0AA9D61FBB12D70056D188 /* AppDelegate.swift in Sources */,
 			);
@@ -362,11 +369,14 @@
 			baseConfigurationReference = 76377B2F5B0A691AB77E9728 /* Pods-PinFlexLayoutPlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PinFlexLayoutPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.muukii.PinFlexLayoutPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PinFlexLayoutPlayground/PinFlexLayoutPlayground-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -377,11 +387,13 @@
 			baseConfigurationReference = AE7A4C61088BE9C4A0D24046 /* Pods-PinFlexLayoutPlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PinFlexLayoutPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.muukii.PinFlexLayoutPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PinFlexLayoutPlayground/PinFlexLayoutPlayground-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

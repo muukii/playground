@@ -23,8 +23,8 @@ import UIKit
 @objc public class PinLayoutObjCImpl: NSObject, PinLayoutObjC {
     fileprivate var impl: PinLayoutImpl?
     
-    init(view: UIView) {
-        impl = PinLayoutImpl(view: view)
+    init(view: UIView, keepTransform: Bool) {
+        impl = PinLayoutImpl(view: view, keepTransform: keepTransform)
     }
     
     deinit {
@@ -36,6 +36,7 @@ import UIKit
     public func layout() {
         // With objective-c PinLayoutObjCImpl instance are sometimes deallocated only after the context has been quit. For this reason
         // developpers must call the layout: method implicetely.
+        impl?.layout()
         impl = nil
     }
     
@@ -208,9 +209,19 @@ import UIKit
         impl?.horizontally()
         return self
     }
+
+    public func horizontally(_ value: CGFloat) -> PinLayoutObjC {
+        impl?.horizontally(value)
+        return self
+    }
     
     public func vertically() -> PinLayoutObjC {
         impl?.vertically()
+        return self
+    }
+
+    public func vertically(_ value: CGFloat) -> PinLayoutObjC {
+        impl?.vertically(value)
         return self
     }
     
@@ -601,6 +612,18 @@ import UIKit
     
     public func fitSize() -> PinLayoutObjC {
         impl?.fitSize()
+        return self
+    }
+    
+    public func sizeToFit(_ fitType: Fit) -> PinLayoutObjC {
+        let type: FitType
+        switch fitType {
+        case .width: type = .width
+        case .height: type = .height
+        case .widthFlexible: type = .widthFlexible
+        case .heightFlexible: type = .heightFlexible
+        }
+        impl?.sizeToFit(type)
         return self
     }
     

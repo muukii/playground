@@ -13,20 +13,24 @@ public protocol IdentifiableType {
 
   associatedtype IdentifierRawValueType : Hashable, Codable
 
-  typealias ID = Identifier<Self, IdentifierRawValueType>
+  var identifier: Identifier<Self, IdentifierRawValueType> { get }
+}
 
-  var identifier: ID { get }
+struct Shop {
+
+  let id: String
 }
 
 struct Partner : IdentifiableType {
-  
-  typealias IdentifierRawValueType = String
 
-  let identifier: ID
+  let identifier: Identifier<Partner, String>
+  let id: Identifier<Partner, Int>
 }
 
 let p = Partner(identifier: .init(""))
 
-func fetch(by identifier: Identifier<Partner, String>) {
-  
+let id = Identifier<Partner, String>.init("hoge")
+
+func fetch(by identifier: Identifier<Partner, String>) -> Partner {
+  fatalError()
 }

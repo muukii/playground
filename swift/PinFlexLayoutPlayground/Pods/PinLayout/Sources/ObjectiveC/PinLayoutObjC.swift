@@ -26,7 +26,7 @@ import UIKit
 public extension UIView {
     // Expose PinLayout's objective-c interface.
     public var pinObjc: PinLayoutObjC {
-        return PinLayoutObjCImpl(view: self)
+        return PinLayoutObjCImpl(view: self, keepTransform: true)
     }
 }
 
@@ -229,6 +229,7 @@ public extension UIView {
      */
     @discardableResult func aspectRatio() -> PinLayoutObjC
 
+    @discardableResult func sizeToFit(_ fitType: Fit) -> PinLayoutObjC
     @discardableResult func fitSize() -> PinLayoutObjC
 
     //
@@ -326,6 +327,13 @@ public extension UIView {
     ///
     /// - Returns: PinLayout
     @discardableResult func pinEdges() -> PinLayoutObjC
+}
+    
+@objc public enum Fit: Int {
+    case width
+    case height
+    case widthFlexible
+    case heightFlexible
 }
 
 #endif

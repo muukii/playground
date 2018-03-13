@@ -1,9 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/FlexLayout" "$PODS_CONFIGURATION_BUILD_DIR/PinLayout" "$PODS_CONFIGURATION_BUILD_DIR/Yoga" "$PODS_CONFIGURATION_BUILD_DIR/YogaKit"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/FlexLayout" "$PODS_CONFIGURATION_BUILD_DIR/PinLayout" "${PODS_ROOT}/Reveal-SDK/RevealServer-13/iOS"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/FlexLayout/FlexLayout.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/PinLayout/PinLayout.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Yoga/yoga.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/YogaKit/YogaKit.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "FlexLayout" -framework "PinLayout" -framework "YogaKit" -framework "yoga"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Reveal-SDK"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/FlexLayout/FlexLayout.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/PinLayout/PinLayout.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Reveal-SDK"
+OTHER_LDFLAGS = $(inherited) -l"z" -framework "CFNetwork" -framework "CoreGraphics" -framework "FlexLayout" -framework "PinLayout" -framework "QuartzCore" -framework "RevealServer"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
