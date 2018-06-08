@@ -1,7 +1,11 @@
 //: [Previous](@previous)
 
-import Foundation
+import RxSwift
 
-var str = "Hello, playground"
+let task = Single<Int>.error("")
+
+task
+  .do(onDispose: { print("dispose")})
+  .debug().subscribe()
 
 //: [Next](@next)
