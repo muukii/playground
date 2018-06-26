@@ -4,3 +4,7 @@
 [submodule "swift/PromiseKit/TestDrive-PromiseKit.xcworkspace/Projects/promisekit"]
   path = swift/PromiseKit/TestDrive-PromiseKit.xcworkspace/Projects/promisekit
   url = git@github.com:mxcl/PromiseKit.git
+[submodule "swift/Texture/TestDrive-AsyncDisplayKit.xcworkspace/Projects/texture"]
+  path = swift/Texture/TestDrive-AsyncDisplayKit.xcworkspace/Projects/texture
+  url = git@github.com:TextureGroup/Texture.git
+
