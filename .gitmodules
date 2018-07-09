@@ -7,4 +7,7 @@
 [submodule "swift/Texture/TestDrive-AsyncDisplayKit.xcworkspace/Projects/texture"]
   path = swift/Texture/TestDrive-AsyncDisplayKit.xcworkspace/Projects/texture
   url = git@github.com:TextureGroup/Texture.git
+[submodule "swift/RxPlayground/TestDrive-Rx.xcworkspace/Projects/rxswift"]
+  path = swift/RxPlayground/TestDrive-Rx.xcworkspace/Projects/rxswift
+  url = git@github.com:ReactiveX/RxSwift.git
 

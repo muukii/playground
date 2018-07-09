@@ -48,5 +48,9 @@
         <page name='Untitled Page 5'/>
         <page name='Using'/>
         <page name='ShareScope'/>
+        <page name='Untitled Page 6'/>
+        <page name='Untitled Page 7'/>
+        <page name='Scan'/>
+        <page name='Single+TakeUntil'/>
     </pages>
 </playground>

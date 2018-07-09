@@ -2,6 +2,8 @@
 
 import Foundation
 
-var str = "Hello, playground"
+let s = PublishSubject<Int>()
+
+
 
 //: [Next](@next)

@@ -52,7 +52,7 @@ extension PlaygroundTextureViewController {
         ASOverlayLayoutSpec(
           child: ASStackLayoutSpec(
             direction: .vertical,
-            spacing: 8,
+            spacing: 4,
             justifyContent: .spaceBetween,
             alignItems: .stretch,
             children: boxes

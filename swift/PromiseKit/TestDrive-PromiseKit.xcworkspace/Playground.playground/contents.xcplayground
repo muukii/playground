@@ -4,5 +4,7 @@
         <page name='ErrorHandling'/>
         <page name='Untitled Page'/>
         <page name='Thread'/>
+        <page name='Untitled Page 2'/>
+        <page name='Pipe'/>
     </pages>
 </playground>
