@@ -20,6 +20,10 @@ public final class DynamicAnimateTransaction : NSObject {
     animator.delegate = self
   }
 
+  deinit {
+    print("deinit", self)
+  }
+
   public func addBehavior(_ behavior: UIDynamicBehavior) {
 
     guard !isRunning else {
@@ -55,11 +59,6 @@ public final class DynamicAnimateTransaction : NSObject {
       self?.retainSelf = nil
     }
   }
-
-  //  func pause() {
-  //    behaviorBuffer = animator.behaviors
-  //    animator.removeAllBehaviors()
-  //  }
 
   public func addCompletion(_ completion: @escaping Completion) {
     completions.append(completion)
