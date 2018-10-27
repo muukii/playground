@@ -1,6 +1,12 @@
 {
     "glsl-canvas.textures": {
-        "0": "./muukii.jpg",
-        "1": ""
-      }    
+        "0": "https://bit.ly/2SntCrx",
+        "1": "../insta-logo.png",
+        "2": "https://rawgit.com/actarian/plausible-brdf-shader/master/textures/noise/cloud-2.jpg",
+        "3": "https://cdn.dribbble.com/users/51610/screenshots/5457114/denali_dribbble.jpg"
+    },
+    "editor.tabSize": 2,
+    "editor.fontFamily": "Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.wordWrap": "on"
 }
