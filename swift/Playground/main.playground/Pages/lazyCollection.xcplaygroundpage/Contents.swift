@@ -31,30 +31,5 @@ let _a = source.lazy
   .filter { $0.index > 0 }
   .map { $0.run() }
 
-_a.isEmpty
+AnySequence.init(_a)
 
-
-
-//_b[0]
-
-
-//print("lazy")
-//source
-//  .lazy
-//  .map { $0.run() }
-//  .index { (b) -> Bool in
-//    b.index == 1
-//}
-//
-//print("lazy2")
-//source
-//  .lazy
-//  .map { $0.run() }
-//  .index { (b) -> Bool in
-//    b.index == 1
-//  }
-//
-//source.prefix(3)
-
-
-//: [Next](@next)
