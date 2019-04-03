@@ -52,5 +52,9 @@
         <page name='Untitled Page 7'/>
         <page name='Scan'/>
         <page name='Single+TakeUntil'/>
+        <page name='RetryWhen'/>
+        <page name='Untitled Page 8'/>
+        <page name='Untitled Page 9'/>
+        <page name='Merge+Retry'/>
     </pages>
 </playground>
