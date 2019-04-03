@@ -4,10 +4,6 @@ import Foundation
 
 import RxSwift
 
-extension String: Error {
-
-}
-
 let single = Observable<Int>.create { o in
   print("run")
   o.onNext(2)
