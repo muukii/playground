@@ -2,7 +2,7 @@
     "glsl-canvas.textures": {
         "0": "muukii.jpg",
         "1": "../insta-logo.png",
-        "2": "https://rawgit.com/actarian/plausible-brdf-shader/master/textures/noise/cloud-2.jpg",
+        "2": "https://cdn.jsdelivr.net/gh/actarian/plausible-brdf-shader@master/textures/noise/cloud-2.jpg",
         "3": "https://cdn.dribbble.com/users/51610/screenshots/5457114/denali_dribbble.jpg"
     },
     "editor.tabSize": 2,
