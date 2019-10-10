@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B60E8B0230A5CAD007140DB /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B60E8AE230A5BE1007140DB /* Component.swift */; };
+		4BB6775C232D5DA4007DDA1A /* SoManyTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6775A232D5D4B007DDA1A /* SoManyTypealias.swift */; };
+		4BB9E19223184F6100FD9FFE /* AnonymousComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9E19123184F6100FD9FFE /* AnonymousComponent.swift */; };
 		4BDDF42C2305617B006C66F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDDF42B2305617B006C66F7 /* AppDelegate.swift */; };
 		4BDDF42E2305617B006C66F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDDF42D2305617B006C66F7 /* ViewController.swift */; };
 		4BDDF4312305617B006C66F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDDF42F2305617B006C66F7 /* Main.storyboard */; };
@@ -18,8 +19,11 @@
 /* Begin PBXFileReference section */
 		4B60E8AC230A5BB6007140DB /* HOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOC.swift; sourceTree = "<group>"; };
 		4B60E8AE230A5BE1007140DB /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		4B8A206B2314E73700339C16 /* enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
 		4B952A782305689800BAD930 /* 7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7.swift; sourceTree = "<group>"; };
 		4B952A7A23056AAD00BAD930 /* 8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8.swift; sourceTree = "<group>"; };
+		4BB6775A232D5D4B007DDA1A /* SoManyTypealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoManyTypealias.swift; sourceTree = "<group>"; };
+		4BB9E19123184F6100FD9FFE /* AnonymousComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousComponent.swift; sourceTree = "<group>"; };
 		4BDDF4282305617B006C66F7 /* BinarySize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinarySize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDDF42B2305617B006C66F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDDF42D2305617B006C66F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 		4BDDF42A2305617B006C66F7 /* BinarySize */ = {
 			isa = PBXGroup;
 			children = (
+				4BB9E19123184F6100FD9FFE /* AnonymousComponent.swift */,
 				4BDDF42B2305617B006C66F7 /* AppDelegate.swift */,
 				4BDDF42D2305617B006C66F7 /* ViewController.swift */,
 				4BDDF42F2305617B006C66F7 /* Main.storyboard */,
@@ -81,6 +86,8 @@
 				4B952A7A23056AAD00BAD930 /* 8.swift */,
 				4B60E8AC230A5BB6007140DB /* HOC.swift */,
 				4B60E8AE230A5BE1007140DB /* Component.swift */,
+				4B8A206B2314E73700339C16 /* enum.swift */,
+				4BB6775A232D5D4B007DDA1A /* SoManyTypealias.swift */,
 			);
 			path = BinarySize;
 			sourceTree = "<group>";
@@ -157,8 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BDDF42E2305617B006C66F7 /* ViewController.swift in Sources */,
-				4B60E8B0230A5CAD007140DB /* Component.swift in Sources */,
 				4BDDF42C2305617B006C66F7 /* AppDelegate.swift in Sources */,
+				4BB9E19223184F6100FD9FFE /* AnonymousComponent.swift in Sources */,
+				4BB6775C232D5DA4007DDA1A /* SoManyTypealias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
