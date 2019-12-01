@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+    Single<Void>.create { observer in
+      
+      DispatchQueue.global().async {
+        observer(.success(()))
+      }
+      
+      return Disposables.create()
+    }
+    .do(onNext: {
+      print(Thread.current)
+    })
+      .subscribe()
   }
 
   override func didReceiveMemoryWarning() {

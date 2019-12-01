@@ -59,5 +59,6 @@
         <page name='Untitled Page 10'/>
         <page name='Untitled Page 11'/>
         <page name='Disposable'/>
+        <page name='Queue'/>
     </pages>
 </playground>
