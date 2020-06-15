@@ -60,5 +60,7 @@
         <page name='Untitled Page 11'/>
         <page name='Disposable'/>
         <page name='Queue'/>
+        <page name='BehaviorSubject'/>
+        <page name='Emit Element from Array with interval'/>
     </pages>
 </playground>
