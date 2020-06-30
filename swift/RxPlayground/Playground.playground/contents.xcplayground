@@ -62,5 +62,6 @@
         <page name='Queue'/>
         <page name='BehaviorSubject'/>
         <page name='Emit Element from Array with interval'/>
+        <page name='Lock'/>
     </pages>
 </playground>
