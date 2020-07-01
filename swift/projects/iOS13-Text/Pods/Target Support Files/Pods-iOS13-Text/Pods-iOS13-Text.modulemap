@@ -1,0 +1,6 @@
+framework module Pods_iOS13_Text {
+  umbrella header "Pods-iOS13-Text-umbrella.h"
+
+  export *
+  module * { export * }
+}

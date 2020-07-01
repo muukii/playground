@@ -1,0 +1,78 @@
+2019-11-20 22:14:54 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fb011bba630; archive(resolved)='<IDEArchive: 0x7fb0c1710650>', distributionTask(resolved)='2', distributionDestination(resolved)='1', distributionMethod(resolved)='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb0b0952380; teamID='KU2QEJ9K3Z', teamName='Hiroshi Kimura', teamType='Individual', username='muukii.app@gmail.com', isFreeProvisioningTeam='0'>'>
+	Chain (11, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fb011bba630; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb0b0952380; teamID='KU2QEJ9K3Z', teamName='Hiroshi Kimura', teamType='Individual', username='muukii.app@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7faff6510060; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb0b0952380; teamID='KU2QEJ9K3Z', teamName='Hiroshi Kimura', teamType='Individual', username='muukii.app@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7faee7b84b90; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb0b0952380; teamID='KU2QEJ9K3Z', teamName='Hiroshi Kimura', teamType='Individual', username='muukii.app@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7faee7b85330; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb0b0952380; teamID='KU2QEJ9K3Z', teamName='Hiroshi Kimura', teamType='Individual', username='muukii.app@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7faee70c9790; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb0b0952380; teamID='KU2QEJ9K3Z', teamName='Hiroshi Kimura', teamType='Individual', username='muukii.app@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7faf55461e10; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb0b0952380; teamID='KU2QEJ9K3Z', teamName='Hiroshi Kimura', teamType='Individual', username='muukii.app@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7faee5e92f30; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb0b0952380; teamID='KU2QEJ9K3Z', teamName='Hiroshi Kimura', teamType='Individual', username='muukii.app@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fafc6ccc860; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team='(null)'>
+	<IDEDistributionContext: 0x7fb0104c3bd0; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team='(null)'>
+	<IDEDistributionContext: 0x7fb012dee5f0; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fb0d07fa7d0>', team='(null)'>
+	<IDEDistributionContext: 0x7faff5e78100; archive = '<IDEArchive: 0x7fb0c1710650>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7fb011bba630>
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionCreateDestRootStep
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionCopyItemStep
+2019-11-20 22:14:54 +0000  Running /usr/bin/ditto '-V' '/Users/muukii/Library/Developer/Xcode/Archives/2019-11-21/APNsClient 2019-11-21 7.14.xcarchive/Products/Applications/APNsClient.app' '/var/folders/s_/slsss96s2dd62zzthy6p1llr0000gn/T/XcodeDistPipeline.~~~LsUiyG/Root/Applications/APNsClient.app'
+2019-11-20 22:14:54 +0000  >>> Copying /Users/muukii/Library/Developer/Xcode/Archives/2019-11-21/APNsClient 2019-11-21 7.14.xcarchive/Products/Applications/APNsClient.app 
+2019-11-20 22:14:54 +0000  copying file ./Contents/_CodeSignature/CodeResources ... 
+2019-11-20 22:14:54 +0000  2784 bytes for ./Contents/_CodeSignature/CodeResources
+2019-11-20 22:14:54 +0000  copying file ./Contents/MacOS/APNsClient ... 
+2019-11-20 22:14:54 +0000  44976 bytes for ./Contents/MacOS/APNsClient
+2019-11-20 22:14:54 +0000  copying file ./Contents/Resources/Base.lproj/Main.storyboardc/MainMenu.nib ... 
+2019-11-20 22:14:54 +0000  36267 bytes for ./Contents/Resources/Base.lproj/Main.storyboardc/MainMenu.nib
+copying file ./Contents/Resources/Base.lproj/Main.storyboardc/Info.plist ... 
+2019-11-20 22:14:54 +0000  163 bytes for ./Contents/Resources/Base.lproj/Main.storyboardc/Info.plist
+2019-11-20 22:14:54 +0000  copying file ./Contents/Info.plist ... 
+2019-11-20 22:14:54 +0000  1548 bytes for ./Contents/Info.plist
+copying file ./Contents/PkgInfo ... 
+2019-11-20 22:14:54 +0000  8 bytes for ./Contents/PkgInfo
+2019-11-20 22:14:54 +0000  /usr/bin/ditto exited with 0
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionEmbedProfileStep
+2019-11-20 22:14:54 +0000  Skipping profile for item: <IDEDistributionItem: 0x7faee7fd72d0; bundleID='me.muukii.APNsClient', path='<DVTFilePath:0x7fb01191a840:'/Users/muukii/Library/Developer/Xcode/Archives/2019-11-21/APNsClient 2019-11-21 7.14.xcarchive/Products/Applications/APNsClient.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7faf570b1e50; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+}', teamID='(null)', identifier='me.muukii.APNsClient', executablePath='<DVTFilePath:0x7fb003274480:'/Users/muukii/Library/Developer/Xcode/Archives/2019-11-21/APNsClient 2019-11-21 7.14.xcarchive/Products/Applications/APNsClient.app/Contents/MacOS/APNsClient'>', hardenedRuntime='0'>'>
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2019-11-20 22:14:54 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2019-11-20 22:14:54 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionSymbolsStep
+2019-11-20 22:14:54 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionAppThinningStep
+2019-11-20 22:14:54 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionArchThinningStep
+2019-11-20 22:14:54 +0000  Running /Applications/Xcode11.2.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s_/slsss96s2dd62zzthy6p1llr0000gn/T/XcodeDistPipeline.~~~LsUiyG/Root/Applications/APNsClient.app/Contents/MacOS/APNsClient' '-verify_arch' 'arm64e'
+2019-11-20 22:14:54 +0000  /Applications/Xcode11.2.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2019-11-20 22:14:54 +0000  Skipping architecture thinning for item "APNsClient" because arch "arm64e" wasn't found
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionODRStep
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionStripXattrsStep
+2019-11-20 22:14:54 +0000  Running /usr/bin/xattr '-crs' '/var/folders/s_/slsss96s2dd62zzthy6p1llr0000gn/T/XcodeDistPipeline.~~~LsUiyG/Root/Applications/APNsClient.app'
+2019-11-20 22:14:54 +0000  /usr/bin/xattr exited with 0
+2019-11-20 22:14:54 +0000  Processing step: IDEDistributionCodesignStep
+2019-11-20 22:14:54 +0000  Entitlements for <IDEDistributionItem: 0x7faee7fd72d0; bundleID='me.muukii.APNsClient', path='<DVTFilePath:0x7fb01191a840:'/Users/muukii/Library/Developer/Xcode/Archives/2019-11-21/APNsClient 2019-11-21 7.14.xcarchive/Products/Applications/APNsClient.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7faf570b1e50; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+}', teamID='(null)', identifier='me.muukii.APNsClient', executablePath='<DVTFilePath:0x7fb003274480:'/Users/muukii/Library/Developer/Xcode/Archives/2019-11-21/APNsClient 2019-11-21 7.14.xcarchive/Products/Applications/APNsClient.app/Contents/MacOS/APNsClient'>', hardenedRuntime='0'>'>: {
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+}
+2019-11-20 22:14:54 +0000  Writing entitlements for <IDEDistributionItem: 0x7faee7fd72d0; bundleID='me.muukii.APNsClient', path='<DVTFilePath:0x7fb01191a840:'/Users/muukii/Library/Developer/Xcode/Archives/2019-11-21/APNsClient 2019-11-21 7.14.xcarchive/Products/Applications/APNsClient.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7faf570b1e50; isSigned='1', isAdHocSigned='1', signingCertificate='(null)', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+}', teamID='(null)', identifier='me.muukii.APNsClient', executablePath='<DVTFilePath:0x7fb003274480:'/Users/muukii/Library/Developer/Xcode/Archives/2019-11-21/APNsClient 2019-11-21 7.14.xcarchive/Products/Applications/APNsClient.app/Contents/MacOS/APNsClient'>', hardenedRuntime='0'>'> to: /var/folders/s_/slsss96s2dd62zzthy6p1llr0000gn/T/XcodeDistPipeline.~~~LsUiyG/entitlements~~~LLRkuq
+2019-11-20 22:14:54 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'DC5A91E84B496EAC235C20B8CB1428FE1D191014' '--entitlements' '/var/folders/s_/slsss96s2dd62zzthy6p1llr0000gn/T/XcodeDistPipeline.~~~LsUiyG/entitlements~~~LLRkuq' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s_/slsss96s2dd62zzthy6p1llr0000gn/T/XcodeDistPipeline.~~~LsUiyG/Root/Applications/APNsClient.app'
+2019-11-20 22:14:55 +0000  /var/folders/s_/slsss96s2dd62zzthy6p1llr0000gn/T/XcodeDistPipeline.~~~LsUiyG/Root/Applications/APNsClient.app: replacing existing signature
+2019-11-20 22:14:55 +0000  /var/folders/s_/slsss96s2dd62zzthy6p1llr0000gn/T/XcodeDistPipeline.~~~LsUiyG/Root/Applications/APNsClient.app: signed app bundle with Mach-O thin (x86_64) [me.muukii.APNsClient]
+2019-11-20 22:14:55 +0000  /usr/bin/codesign exited with 0
+2019-11-20 22:14:55 +0000  Processing step: IDEDistributionZipODRItemStep
+2019-11-20 22:14:55 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2019-11-20 22:14:55 +0000  Processing step: IDEDistributionSkipPackagingStep
+2019-11-20 22:14:55 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2019-11-20 22:14:55 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2019-11-20 22:14:55 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2019-11-20 22:14:55 +0000  Processing step: IDEDistributionCreateManifestStep
+2019-11-20 22:14:55 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so
